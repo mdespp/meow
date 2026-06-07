@@ -1,0 +1,5311 @@
+:root{--ink:#173033;--muted:#6f6962;--line:#d9d0c7;--cream:#fbf7f2;--bg:#edf3e9;--pink:#fff3f5;--green:#edf7ec;--blue:#edf3fa;--yellow:#fff1b8;--redsoft:#fff0ed;--red:#a3463d}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{width:min(1080px,calc(100% - 32px));margin:0 auto;padding:28px 0 64px}.topbar{border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:24px;display:flex;justify-content:space-between;gap:18px;align-items:center}.brand{display:flex;gap:12px;align-items:center}.logo{width:48px;height:48px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-weight:950}.brand h1{font-size:26px;letter-spacing:.16em;margin:0}.brand p{margin:0;color:var(--muted);font-weight:800;font-size:13px}nav{display:flex;gap:18px}nav a{color:var(--ink);text-decoration:none;font-weight:950;font-size:14px}main{display:grid;gap:20px}.hero,.cat-list,.today-panel,.profile-card{border:2px solid var(--ink);border-radius:18px;background:white}.hero{padding:20px;display:flex;justify-content:space-between;gap:16px;align-items:end}.eyebrow{display:block;text-transform:uppercase;letter-spacing:.15em;font-weight:950;font-size:11px}.hero h2,.card-head h2,.today-panel h2,.profile-card h2{font-family:Georgia,"Times New Roman",serif;font-size:38px;margin:4px 0;letter-spacing:-.04em}.hero p,.card-head p,.panel-title p,.mini-section-head span,.cat-tile p,.submitted-row p,.attention-row p,.profile-left p,.help-text{margin:0;color:var(--muted);font-weight:760;font-size:14px}.mode-row{display:flex;gap:8px;flex-wrap:wrap}.mode-row button,.bubble,.plain-pill,.search-row button,.submitted-row button{border:2px solid var(--ink);border-radius:999px;background:white;padding:10px 15px;color:var(--ink);font-weight:950}.mode-row button.active{background:var(--ink);color:white}.hub-row{display:grid;grid-template-columns:1.15fr 1.15fr auto auto;gap:14px;align-items:center}.hub-card{min-height:88px;border:2px solid var(--ink);border-radius:16px;padding:16px;text-align:left;color:var(--ink)}.hub-card.green{background:var(--green)}.hub-card.blue{background:var(--blue)}.hub-card strong{display:block;font-size:24px;margin-bottom:6px}.hub-card span{color:var(--muted);font-weight:760;font-size:14px}.bubble{height:48px;box-shadow:0 10px 24px rgba(0,0,0,.08)}.bubble b{background:#c74747;color:white;border-radius:50%;padding:2px 7px;margin-left:5px}.workspace{display:grid;grid-template-columns:.9fr 1.35fr;gap:18px}.card-head{padding:16px 18px;border-bottom:1px solid var(--line);background:white}.card-head.center{text-align:center}.search-row{display:grid;grid-template-columns:1fr auto;gap:10px;background:var(--cream);padding:14px;border-bottom:1px solid var(--line)}.search-row input,.compact-form input,.compact-form select,.compact-form textarea,.panel-title select{width:100%;border:1px solid var(--line);border-radius:999px;background:white;padding:11px 13px;color:var(--ink)}.cat-scroll{max-height:430px;overflow-y:auto;padding:12px 14px;display:grid;gap:10px}.cat-tile{border:1px solid var(--line);background:var(--pink);border-radius:14px;padding:12px;display:grid;grid-template-columns:44px 1fr auto;gap:12px;text-align:left;align-items:center;color:var(--ink)}.cat-tile.selected{outline:2px solid var(--ink)}.avatar,.submitted-row i,.attention-row i{width:38px;height:38px;border:2px solid #f0a9b5;background:#ffe7eb;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:950}.cat-tile strong{display:block;font-weight:950}.cat-tile span,.cat-tile em{display:inline-block;border:1px solid var(--line);border-radius:999px;background:#fff8df;padding:3px 8px;margin-top:4px;font-style:normal;font-size:12px;font-weight:850}.cat-tile small{font-weight:950;color:var(--ink)}.today-panel{overflow:hidden}.panel-title{padding:16px 18px;display:flex;justify-content:space-between;gap:16px;align-items:center;border-bottom:1px solid var(--line)}.panel-title select{width:170px}.mini-section{padding:16px 18px;border-bottom:1px solid var(--line)}.mini-section:last-child{border-bottom:0}.mini-section-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px}.mini-section h3{margin:0;font-size:20px}.stack,.modal-list{display:grid;gap:10px}.attention-row,.submitted-row,.modal-row{border:1px solid var(--line);border-radius:14px;background:white;padding:12px;display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;text-align:left;color:var(--ink)}.attention-row.warning,.modal-row.warning{background:var(--yellow)}.attention-row.danger,.modal-row.danger{background:var(--redsoft)}.attention-row span{border:1px solid #e2b36d;border-radius:999px;background:white;padding:7px 11px;font-weight:900}.attention-row strong,.submitted-row strong,.modal-row strong{display:block;font-weight:950}.submitted-row{background:var(--pink)}.profile-card{padding:18px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start}.profile-left{display:grid;grid-template-columns:86px 1fr;gap:14px;align-items:center}.photo{height:76px;border:1px solid var(--line);border-radius:14px;background:#e4dfd6;display:grid;place-items:center;color:var(--muted);font-weight:950;font-size:12px;text-transform:uppercase}.profile-card h2{font-size:34px}.profile-tags{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.profile-tags span{border:1px solid var(--line);background:var(--cream);border-radius:14px;padding:9px;color:var(--muted);font-size:13px;font-weight:760}.profile-tags b{display:block;color:var(--ink);text-transform:uppercase;font-size:10px;letter-spacing:.08em}.modal-backdrop{position:fixed;inset:0;padding:20px;display:grid;place-items:center;background:rgba(23,48,51,.35);z-index:50}.modal-card{width:min(640px,100%);max-height:88vh;overflow-y:auto;background:white;border:2px solid var(--ink);border-radius:18px;box-shadow:0 20px 80px rgba(0,0,0,.25)}.modal-top{position:sticky;top:0;background:white;border-bottom:1px solid var(--line);padding:14px 16px;display:flex;justify-content:space-between;gap:12px;align-items:center}.modal-top h2{margin:0;font-size:22px}.modal-top button{border:1px solid var(--line);border-radius:999px;background:white;padding:8px 12px;font-weight:900}.modal-body{padding:16px}.compact-form{display:grid;gap:12px}.compact-form label{display:grid;gap:5px;font-size:12px;font-weight:950;color:var(--ink)}.compact-form textarea{border-radius:12px;min-height:82px;resize:vertical}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice-grid{display:flex;flex-wrap:wrap;gap:8px}.choice{border:1px solid var(--line);border-radius:999px;background:white;padding:8px 11px;color:var(--ink);font-weight:900}.choice.active{background:var(--ink);color:white;border-color:var(--ink)}.soft-box{border:1px solid var(--line);border-radius:14px;background:var(--cream);padding:12px}.submit-btn{border:2px solid var(--ink);border-radius:999px;background:var(--ink);color:white;font-weight:950;padding:12px 16px}.submit-btn:disabled{opacity:.45;cursor:not-allowed}.empty{color:var(--muted);font-weight:760}@media(max-width:900px){.topbar,.hero,.panel-title,.mini-section-head{align-items:stretch;flex-direction:column}.hub-row,.workspace,.profile-tags,.two-col{grid-template-columns:1fr}.profile-card{grid-template-columns:1fr}.panel-title select{width:100%}nav{flex-wrap:wrap}}@media(max-width:620px){.app{width:min(100% - 20px,1080px)}.cat-tile,.attention-row,.submitted-row{grid-template-columns:38px 1fr}.cat-tile small,.attention-row span,.submitted-row button{grid-column:2;width:fit-content}.profile-left{grid-template-columns:1fr}}
+
+
+/* v15 minimal page navigation */
+nav.page-tabs {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+nav.page-tabs button {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-weight: 950;
+  font-size: 18px;
+  padding: 4px 0;
+}
+
+nav.page-tabs button.active {
+  border-bottom: 3px solid var(--ink);
+}
+
+.hero-status {
+  border: 1px solid var(--line);
+  background: var(--cream);
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-weight: 950;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  nav.page-tabs {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  nav.page-tabs button {
+    font-size: 15px;
+  }
+
+  .hero-status {
+    width: fit-content;
+  }
+}
+
+
+/* v16: minimal page tabs, admin hidden behind password */
+.hero {
+  align-items: start;
+}
+
+.hero-status {
+  display: none;
+}
+
+nav.page-tabs {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav.page-tabs button {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-weight: 950;
+  font-size: 16px;
+  padding: 4px 0;
+}
+
+nav.page-tabs > button.active {
+  border-bottom: 3px solid var(--ink);
+}
+
+.admin-access {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+}
+
+.admin-access input {
+  width: 132px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: white;
+  padding: 7px 10px;
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.admin-access button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.admin-access button:hover {
+  border-color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .admin-access {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .admin-access input {
+    flex: 1;
+    width: auto;
+  }
+}
+
+
+/* v17: no big dashboard intro box; simple top navigation */
+.hero {
+  display: none !important;
+}
+
+nav.page-tabs {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav.page-tabs button {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-weight: 950;
+  font-size: 18px;
+  padding: 4px 0;
+}
+
+nav.page-tabs button.active {
+  border-bottom: 3px solid var(--ink);
+}
+
+.admin-access {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  nav.page-tabs {
+    gap: 16px;
+  }
+
+  nav.page-tabs button {
+    font-size: 15px;
+  }
+}
+
+
+/* v18: Help/Handbook is a top-right popup button, not a page selection */
+nav.page-tabs .help-nav {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: white;
+  padding: 7px 11px;
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+nav.page-tabs .help-nav.active {
+  border-bottom: 1px solid var(--line);
+}
+
+nav.page-tabs .help-nav:hover {
+  border-color: var(--ink);
+}
+
+
+/* v19: Help / Handbook matches Cat Apartment, Foster, and Admin exactly */
+nav.page-tabs .help-nav {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 4px 0 !important;
+  margin-left: 0 !important;
+  color: var(--ink) !important;
+  font-weight: 950 !important;
+  font-size: 18px !important;
+  box-shadow: none !important;
+}
+
+nav.page-tabs .help-nav:hover {
+  border-color: transparent !important;
+}
+
+nav.page-tabs .help-nav.active {
+  border-bottom: 0 !important;
+}
+
+@media (max-width: 900px) {
+  nav.page-tabs .help-nav {
+    font-size: 15px !important;
+  }
+}
+
+
+/* v20: remove duplicate Help/Handbook pill from the hub row */
+.hub-row {
+  grid-template-columns: 1.15fr 1.15fr auto !important;
+}
+
+@media (max-width: 900px) {
+  .hub-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* v21: remove duplicate Help/Handbook pill entirely from the content area */
+.hub-row {
+  grid-template-columns: 1fr 1fr auto !important;
+}
+
+.hub-row .bubble-help,
+.hub-row button[onclick*="help"] {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .hub-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* v22: approved minimal pill hub */
+.hub-row.hub-pills {
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  grid-template-columns: none !important;
+}
+
+.hub-row.hub-pills .hub-card,
+.hub-row.hub-pills .bubble {
+  display: none !important;
+}
+
+.hub-pill {
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: white;
+  padding: 10px 16px;
+  min-height: 54px;
+  color: var(--ink);
+  font-weight: 950;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform .18s ease,
+    background .18s ease,
+    color .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease;
+  will-change: transform;
+}
+
+.hub-pill .plus {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  color: var(--ink);
+  font-weight: 950;
+  margin-right: 8px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2px;
+  transform: translateY(-1px);
+  transition: transform .18s ease, background .18s ease, color .18s ease;
+}
+
+.hub-pill.action:hover {
+  background: var(--ink);
+  color: white;
+  transform: scale(1.045);
+  box-shadow: 0 10px 24px rgba(23, 48, 51, .14);
+}
+
+.hub-pill.action:hover .plus {
+  transform: translateY(-1px) scale(1.08);
+  background: white;
+  color: var(--ink);
+}
+
+.hub-pill.alert {
+  background: #fff2bd;
+  border-color: var(--ink);
+}
+
+.hub-pill.alert:hover {
+  transform: scale(1.025);
+  box-shadow: 0 8px 18px rgba(23, 48, 51, .10);
+}
+
+.alert-badge {
+  background: #c64a4a;
+  color: white;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 25px;
+  height: 25px;
+  padding: 0 7px;
+  margin-left: 6px;
+  font-size: 13px;
+  font-weight: 950;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hub-pill,
+  .hub-pill .plus {
+    transition: none;
+  }
+
+  .hub-pill.action:hover,
+  .hub-pill.alert:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .hub-row.hub-pills {
+    display: flex !important;
+  }
+}
+
+
+/* v23: center the main action pills under the header */
+.hub-row.hub-pills {
+  justify-content: center !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 900px) {
+  .hub-row.hub-pills {
+    justify-content: flex-start !important;
+  }
+}
+
+
+/* v24: volunteer view stays on today, no date picker */
+.panel-title.no-date-picker {
+  justify-content: flex-start !important;
+}
+
+.panel-title.no-date-picker select {
+  display: none !important;
+}
+
+
+/* v25: multi-cat Cat Log flow */
+.catlog-help {
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 720;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.catlog-person,
+.cat-select-step {
+  display: grid;
+  gap: 14px;
+}
+
+.catlog-person input,
+.catlog-person select,
+.cat-select-step input,
+.expand-body input,
+.expand-body select,
+.expand-body textarea,
+.optional-note-box textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+  padding: 12px 14px;
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.catlog-person label {
+  display: grid;
+  gap: 6px;
+  font-weight: 950;
+}
+
+.catlog-search {
+  border-color: #f0a9b5 !important;
+  border-radius: 12px !important;
+}
+
+.select-cat-list {
+  display: grid;
+  gap: 10px;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.select-cat-row {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff3f5;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  text-align: left;
+}
+
+.select-cat-row.selected {
+  outline: 2px solid var(--ink);
+}
+
+.select-check,
+.avatar-lite {
+  width: 38px;
+  height: 38px;
+  border: 2px solid #f0a9b5;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 950;
+  background: #ffe7eb;
+}
+
+.select-cat-row strong {
+  display: block;
+  font-size: 18px;
+}
+
+.select-cat-row em {
+  display: block;
+  color: var(--muted);
+  font-style: normal;
+  font-weight: 760;
+}
+
+.select-cat-row small,
+.catlog-profile-card small {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff8df;
+  padding: 3px 8px;
+  margin: 4px 5px 0 0;
+  color: var(--ink);
+  font-weight: 850;
+}
+
+.select-cat-row .auto-filled,
+.catlog-profile-card .auto-filled {
+  background: #eef4fb;
+}
+
+.select-cat-row b {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: white;
+}
+
+.catlog-footer {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ghost-pill,
+.danger-outline {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  padding: 10px 15px;
+  font-weight: 950;
+}
+
+.danger-outline {
+  color: #9f4038;
+  border-color: #efb5b8;
+}
+
+.catlog-workspace {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 16px;
+}
+
+.catlog-sidebar {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+  align-self: start;
+}
+
+.catlog-sidebar h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.catlog-sidebar p,
+.catlog-status,
+.section-help,
+.catlog-submit-row span {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 720;
+}
+
+.selected-cat-stack {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.selected-cat {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  text-align: left;
+}
+
+.selected-cat.active {
+  outline: 2px solid var(--ink);
+}
+
+.selected-cat strong,
+.selected-cat em {
+  display: block;
+}
+
+.selected-cat em {
+  color: var(--muted);
+  font-style: normal;
+}
+
+.selected-cat b {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff3f5;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+
+.catlog-profile-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+  padding: 12px;
+}
+
+.profile-note-box {
+  border: 1px dashed #d8902e;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-weight: 720;
+}
+
+.catlog-form-area h2 {
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: .04em;
+  margin: 0;
+}
+
+.catlog-status {
+  text-align: center;
+  margin: 8px 0 18px;
+}
+
+.expand-section,
+.optional-note-box,
+.catlog-submit-row {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.expand-section.warning {
+  border-color: #d8902e;
+}
+
+.expand-section.danger {
+  border-color: #cc4f5e;
+  background: #fff6f6;
+}
+
+.expand-head {
+  width: 100%;
+  border: 0;
+  background: white;
+  color: var(--ink);
+  padding: 14px 16px;
+  font-size: 18px;
+  font-weight: 950;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.expand-section.danger .expand-head {
+  background: #fff6f6;
+}
+
+.expand-head b {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+.expand-section.danger .expand-head b {
+  background: #cc4f5e;
+}
+
+.expand-body {
+  border-top: 1px solid var(--line);
+  padding: 14px 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.chip-grid {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  padding: 8px 12px;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.chip.selected {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+
+.expand-body textarea,
+.optional-note-box textarea {
+  min-height: 86px;
+  resize: vertical;
+}
+
+.optional-note-box {
+  padding: 14px 16px;
+}
+
+.optional-note-box h3 {
+  margin: 0 0 10px;
+}
+
+.catlog-submit-row {
+  padding: 12px 16px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.modal-card:has(.catlog-workspace) {
+  width: min(1100px, 100%);
+}
+
+@media (max-width: 900px) {
+  .catlog-workspace,
+  .catlog-submit-row,
+  .select-cat-row,
+  .selected-cat {
+    grid-template-columns: 1fr;
+  }
+
+  .catlog-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+
+/* v26: Cat Log refinements */
+
+/* 1. Selection screen: softer selected outline/coloring */
+.select-cat-row {
+  background: #fff7f8 !important;
+  border-color: #ead8d2 !important;
+}
+
+.select-cat-row.selected {
+  outline: none !important;
+  border: 2px solid var(--ink) !important;
+  background: #fff4f6 !important;
+  box-shadow: 0 6px 16px rgba(23, 48, 51, .06);
+}
+
+.select-cat-row b {
+  min-width: 104px;
+  text-align: center;
+}
+
+.select-check {
+  background: #ffe8ee !important;
+}
+
+.select-cat-row.selected .select-check {
+  background: var(--ink) !important;
+  border-color: var(--ink) !important;
+  color: white !important;
+}
+
+/* 2. All cat log sections start collapsed, with distinct gentle colors */
+.expand-section.food {
+  border-color: #92b98d;
+  background: #f4fbf1;
+}
+
+.expand-section.cleaning {
+  border-color: #9db9d6;
+  background: #f2f7fc;
+}
+
+.expand-section.behavior {
+  border-color: #d6bfdc;
+  background: #fbf5fc;
+}
+
+.expand-section.warning {
+  border-color: #d8902e;
+  background: #fffaf0;
+}
+
+.expand-section.danger {
+  border-color: #cc4f5e;
+  background: #fff6f6;
+}
+
+.expand-section.food .expand-head {
+  background: #f4fbf1;
+}
+
+.expand-section.cleaning .expand-head {
+  background: #f2f7fc;
+}
+
+.expand-section.behavior .expand-head {
+  background: #fbf5fc;
+}
+
+.expand-section.warning .expand-head {
+  background: #fffaf0;
+}
+
+.expand-section.danger .expand-head {
+  background: #fff6f6;
+}
+
+.expand-section.food .expand-head b {
+  background: #4d7f49;
+}
+
+.expand-section.cleaning .expand-head b {
+  background: #416f99;
+}
+
+.expand-section.behavior .expand-head b {
+  background: #765088;
+}
+
+.expand-section.warning .expand-head b {
+  background: #b56d12;
+}
+
+.expand-section.danger .expand-head b {
+  background: #cc4f5e;
+}
+
+/* Button chips inside opened sections */
+.expand-section.food .chip.selected {
+  background: #4d7f49;
+  border-color: #4d7f49;
+}
+
+.expand-section.cleaning .chip.selected {
+  background: #416f99;
+  border-color: #416f99;
+}
+
+.expand-section.behavior .chip.selected {
+  background: #765088;
+  border-color: #765088;
+}
+
+.expand-section.warning .chip.selected {
+  background: #b56d12;
+  border-color: #b56d12;
+}
+
+.expand-section.danger .chip.selected {
+  background: #cc4f5e;
+  border-color: #cc4f5e;
+}
+
+/* 3. Phone/tablet: keep the selected-cat cards compact, not giant stacked blocks */
+@media (max-width: 900px) {
+  .catlog-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .catlog-sidebar {
+    padding: 12px;
+  }
+
+  .selected-cat-stack {
+    gap: 8px;
+  }
+
+  .selected-cat {
+    grid-template-columns: 40px 1fr auto !important;
+    padding: 9px 10px !important;
+    min-height: 62px;
+  }
+
+  .selected-cat b {
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .catlog-profile-card {
+    padding: 12px;
+  }
+
+  .profile-note-box {
+    padding: 9px;
+  }
+
+  .catlog-form-area h2 {
+    margin-top: 10px;
+  }
+
+  .catlog-submit-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .catlog-submit-row .submit-btn,
+  .catlog-submit-row .danger-outline {
+    width: 100%;
+  }
+}
+
+/* 4. Very small phones: still compact, without shrinking the main font */
+@media (max-width: 560px) {
+  .modal-body {
+    padding: 12px;
+  }
+
+  .catlog-sidebar h3 {
+    font-size: 19px;
+  }
+
+  .selected-cat {
+    grid-template-columns: 36px 1fr !important;
+  }
+
+  .selected-cat b {
+    grid-column: 2;
+    width: fit-content;
+  }
+
+  .avatar-lite {
+    width: 34px;
+    height: 34px;
+  }
+
+  .expand-head {
+    padding: 12px 13px;
+  }
+
+  .expand-body {
+    padding: 12px 13px;
+  }
+}
+
+
+/* v27: no auto-select, no pink selection screen, image/avatar stays visible instead of checkmark */
+.select-cat-row {
+  background: #ffffff !important;
+  border-color: var(--line) !important;
+}
+
+.select-cat-row:nth-child(even) {
+  background: #fbf8f2 !important;
+}
+
+.select-cat-row.selected {
+  outline: none !important;
+  border: 2px solid var(--ink) !important;
+  background: #f3f8f0 !important;
+  box-shadow: 0 6px 16px rgba(23, 48, 51, .06);
+}
+
+.select-check {
+  display: none !important;
+}
+
+.select-photo {
+  width: 46px;
+  height: 46px;
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  background: #e8eee3;
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  font-weight: 950;
+  overflow: hidden;
+}
+
+.select-cat-row.selected .select-photo {
+  border-color: var(--ink);
+  background: #dfeadc;
+}
+
+.select-cat-row b {
+  background: white !important;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.select-cat-row.selected b {
+  background: var(--ink) !important;
+  color: white !important;
+  border-color: var(--ink) !important;
+}
+
+.catlog-search {
+  border-color: var(--line) !important;
+}
+
+/* Remove remaining pink from selected-cat sidebar status chips where possible */
+.selected-cat b {
+  background: #f3f8f0 !important;
+}
+
+.avatar-lite {
+  border-color: var(--line) !important;
+  background: #e8eee3 !important;
+}
+
+
+/* v28: selected-cat modal color direction from chosen test */
+.select-cat-row {
+  background: #ffffff !important;
+  border: 1.5px solid #d8d0c6 !important;
+}
+
+.select-cat-row:nth-child(even) {
+  background: #ffffff !important;
+}
+
+.select-cat-row.selected {
+  background: #e8f2f4 !important;
+  border: 2px solid #4f7781 !important;
+  box-shadow: none !important;
+}
+
+.select-photo {
+  background: #edf4f5 !important;
+  border: 2px solid #c4d6d9 !important;
+  color: var(--ink) !important;
+}
+
+.select-cat-row.selected .select-photo {
+  background: #edf4f5 !important;
+  border-color: #4f7781 !important;
+}
+
+/* thicker little pet/profile pills */
+.select-cat-row small,
+.catlog-profile-card small {
+  border: 2px solid #cbdadc !important;
+  background: #eef3f4 !important;
+  color: var(--ink) !important;
+  font-weight: 900 !important;
+}
+
+.select-cat-row .auto-filled,
+.catlog-profile-card .auto-filled {
+  background: #eef3f4 !important;
+  border-color: #cbdadc !important;
+}
+
+/* selected button in chosen style */
+.select-cat-row b {
+  border: 1.5px solid #d8d0c6 !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+}
+
+.select-cat-row.selected b {
+  background: var(--ink) !important;
+  color: #ffffff !important;
+  border-color: var(--ink) !important;
+}
+
+/* keep the search neutral */
+.catlog-search {
+  border-color: #d8d0c6 !important;
+}
+
+
+/* v29: keep blue-green only for selected cat row, not every little tag */
+.select-cat-row small,
+.catlog-profile-card small {
+  border-width: 2px !important;
+  font-weight: 900 !important;
+}
+
+/* Mood tags: warm cream */
+.select-cat-row small:first-of-type,
+.catlog-profile-card small:first-of-type {
+  background: #fff8dc !important;
+  border-color: #e1d3a6 !important;
+  color: var(--ink) !important;
+}
+
+/* Auto-filled/profile tags: neutral stone, not blue */
+.select-cat-row .auto-filled,
+.catlog-profile-card .auto-filled {
+  background: #f3efe6 !important;
+  border-color: #d8d0c6 !important;
+  color: var(--ink) !important;
+}
+
+/* Selected-row color stays blue-green only here */
+.select-cat-row.selected {
+  background: #e8f2f4 !important;
+  border-color: #4f7781 !important;
+}
+
+.select-cat-row.selected .select-photo {
+  background: #edf4f5 !important;
+  border-color: #4f7781 !important;
+}
+
+
+/* v30: selected cats move to removable top pills; selected cats disappear from search */
+.chosen-cat-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: -2px 0 4px;
+}
+
+.chosen-cat-pill {
+  border: 2px solid #4f7781;
+  border-radius: 999px;
+  background: #e8f2f4;
+  color: var(--ink);
+  padding: 6px 8px 6px 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 950;
+}
+
+.chosen-cat-photo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #4f7781;
+  background: #edf4f5;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 950;
+  overflow: hidden;
+}
+
+.chosen-cat-pill b {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: white;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+  font-size: 14px;
+}
+
+.empty-select {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 18px;
+  color: var(--muted);
+  font-weight: 800;
+  text-align: center;
+}
+
+.catlog-footer.no-cancel {
+  grid-template-columns: 1fr auto;
+}
+
+.catlog-footer.no-cancel span {
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 760;
+}
+
+/* Make selection modal less fat on phone/tablet without shrinking the font */
+@media (max-width: 900px) {
+  .modal-card:has(.cat-select-step) {
+    width: min(720px, calc(100% - 18px));
+  }
+
+  .cat-select-step {
+    gap: 10px;
+  }
+
+  .catlog-help {
+    font-size: 17px;
+    margin-bottom: 6px;
+    text-align: left;
+  }
+
+  .select-cat-list {
+    gap: 8px;
+    max-height: 390px;
+  }
+
+  .select-cat-row {
+    grid-template-columns: 52px 1fr auto !important;
+    min-height: 86px;
+    padding: 10px 12px !important;
+  }
+
+  .select-photo {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .select-cat-row strong {
+    font-size: 20px;
+  }
+
+  .select-cat-row em {
+    font-size: 16px;
+  }
+
+  .select-cat-row b {
+    min-width: 92px;
+    padding: 8px 10px;
+  }
+
+  .catlog-footer.no-cancel {
+    display: grid;
+    grid-template-columns: 1fr auto !important;
+    align-items: center;
+    padding: 10px 12px;
+  }
+
+  .catlog-footer.no-cancel .submit-btn {
+    width: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .modal-card:has(.cat-select-step) .modal-body {
+    padding: 12px;
+  }
+
+  .select-cat-row {
+    grid-template-columns: 46px 1fr !important;
+  }
+
+  .select-cat-row b {
+    grid-column: 2;
+    width: fit-content;
+  }
+
+  .select-photo {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 12px;
+  }
+
+  .chosen-cat-pill {
+    padding: 5px 7px 5px 5px;
+  }
+
+  .chosen-cat-photo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .catlog-footer.no-cancel {
+    grid-template-columns: 1fr !important;
+  }
+
+  .catlog-footer.no-cancel .submit-btn {
+    width: 100%;
+  }
+}
+
+
+/* v31: cat selection rows are only for picking cats, so remove extra description-pill spacing */
+.select-cat-row em {
+  margin-bottom: 0 !important;
+}
+
+.select-cat-row span > small {
+  display: none !important;
+}
+
+.select-cat-row {
+  min-height: 82px;
+}
+
+@media (max-width: 900px) {
+  .select-cat-row {
+    min-height: 74px;
+  }
+}
+
+
+/* v32: clearer selected-cat status labels */
+.selected-cat strong {
+  font-size: 20px !important;
+}
+
+.selected-cat em {
+  font-size: 18px !important;
+}
+
+.selected-cat .status-pill {
+  font-size: 14px !important;
+  font-weight: 950 !important;
+  border-width: 2px !important;
+  padding: 6px 11px !important;
+}
+
+/* Has data should feel complete/positive */
+.selected-cat .status-pill.has-data {
+  background: #e6f3df !important;
+  border-color: #8ab47d !important;
+  color: #244b20 !important;
+}
+
+/* Not started should be neutral, not red, because it is not an error */
+.selected-cat .status-pill.not-started {
+  background: #f2f2ee !important;
+  border-color: #d1d0c8 !important;
+  color: #5f625d !important;
+}
+
+@media (max-width: 900px) {
+  .selected-cat .status-pill {
+    font-size: 13px !important;
+    padding: 5px 9px !important;
+  }
+}
+
+
+/* v33: sections are muted until that section has data */
+.expand-section.empty {
+  opacity: .58;
+  filter: saturate(.55);
+}
+
+.expand-section.filled {
+  opacity: 1;
+  filter: saturate(1.12);
+  box-shadow: 0 7px 18px rgba(23, 48, 51, .07);
+}
+
+.expand-section.empty .expand-head b {
+  opacity: .78;
+}
+
+.expand-section.filled .expand-head {
+  font-weight: 950;
+}
+
+.section-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-right em {
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 950;
+  opacity: .85;
+}
+
+/* keep opened/edited sections readable even if the textarea is focused */
+.expand-section.empty:focus-within,
+.expand-section.empty:hover {
+  opacity: .78;
+}
+
+/* Optional note is also muted until typed into */
+.optional-note-box {
+  opacity: .78;
+}
+
+
+/* v34: no duplicate cat-name input inside medical/incident; cat is already selected */
+.expand-section.warning select {
+  max-width: 520px;
+}
+
+.expand-section.danger input {
+  max-width: 520px;
+}
+
+
+/* v35: less greyed out empty sections, still clearly different from filled */
+.expand-section.empty {
+  opacity: .82 !important;
+  filter: saturate(.82) !important;
+}
+
+.expand-section.empty .expand-head {
+  color: var(--ink) !important;
+}
+
+.expand-section.empty .expand-head b {
+  opacity: .92 !important;
+}
+
+.expand-section.filled {
+  opacity: 1 !important;
+  filter: saturate(1.16) !important;
+  box-shadow: 0 7px 18px rgba(23, 48, 51, .08);
+}
+
+.expand-section.empty:focus-within,
+.expand-section.empty:hover {
+  opacity: .92 !important;
+  filter: saturate(.95) !important;
+}
+
+/* keep the section colors visible even while empty */
+.expand-section.food.empty {
+  background: #f2faee !important;
+  border-color: #8fbd88 !important;
+}
+
+.expand-section.cleaning.empty {
+  background: #eef6fd !important;
+  border-color: #93b7dc !important;
+}
+
+.expand-section.behavior.empty {
+  background: #fbf1fd !important;
+  border-color: #d0aee0 !important;
+}
+
+.expand-section.warning.empty {
+  background: #fff8ea !important;
+  border-color: #d8902e !important;
+}
+
+.expand-section.medication.empty {
+  background: #fff8ea !important;
+  border-color: #d8902e !important;
+}
+
+.expand-section.danger.empty {
+  background: #fff3f4 !important;
+  border-color: #cc4f5e !important;
+}
+
+/* filled states stay stronger */
+.expand-section.food.filled {
+  background: #e5f5df !important;
+  border-color: #4d7f49 !important;
+}
+
+.expand-section.cleaning.filled {
+  background: #e4f0fb !important;
+  border-color: #416f99 !important;
+}
+
+.expand-section.behavior.filled {
+  background: #f4e8f8 !important;
+  border-color: #765088 !important;
+}
+
+.expand-section.warning.filled,
+.expand-section.medication.filled {
+  background: #fff1d8 !important;
+  border-color: #b56d12 !important;
+}
+
+.expand-section.danger.filled {
+  background: #fff0f1 !important;
+  border-color: #cc4f5e !important;
+}
+
+
+/* v36: keep section words readable/vibrant even when the section is empty */
+.expand-section.empty .expand-head,
+.expand-section.empty .expand-head span:first-child {
+  color: var(--ink) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* empty sections keep softer background, but text is always strong */
+.expand-section.empty {
+  opacity: 1 !important;
+  filter: saturate(.88) !important;
+}
+
+.expand-section.empty .expand-head {
+  font-weight: 950 !important;
+}
+
+/* plus button can be muted, but not the words */
+.expand-section.empty .expand-head b {
+  opacity: .72 !important;
+  filter: saturate(.65) !important;
+}
+
+/* filled sections still look more active */
+.expand-section.filled .expand-head,
+.expand-section.filled .expand-head span:first-child {
+  color: var(--ink) !important;
+  opacity: 1 !important;
+}
+
+.expand-section.filled .expand-head b {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+
+/* v37: filled sections are clearly vibrant, words stay strong, both medical sections match */
+.expand-section .expand-head,
+.expand-section .expand-head span:first-child {
+  color: var(--ink) !important;
+  opacity: 1 !important;
+  filter: none !important;
+  font-weight: 950 !important;
+}
+
+/* Empty still has color, but lighter */
+.expand-section.empty {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.expand-section.food.empty,
+.expand-section.food.empty .expand-head {
+  background: #f1f8ed !important;
+  border-color: #9fc897 !important;
+}
+
+.expand-section.cleaning.empty,
+.expand-section.cleaning.empty .expand-head {
+  background: #edf5fc !important;
+  border-color: #9bbdde !important;
+}
+
+.expand-section.behavior.empty,
+.expand-section.behavior.empty .expand-head {
+  background: #faf1fc !important;
+  border-color: #d2b2df !important;
+}
+
+/* Both medical observation and medication use the same amber family */
+.expand-section.warning.empty,
+.expand-section.medication.empty,
+.expand-section.warning.empty .expand-head,
+.expand-section.medication.empty .expand-head {
+  background: #fff7e6 !important;
+  border-color: #e0a64d !important;
+}
+
+.expand-section.danger.empty,
+.expand-section.danger.empty .expand-head {
+  background: #fff2f4 !important;
+  border-color: #dd7b87 !important;
+}
+
+/* Filled becomes much easier to spot */
+.expand-section.food.filled,
+.expand-section.food.filled .expand-head {
+  background: #dff2d7 !important;
+  border-color: #3f7f3d !important;
+}
+
+.expand-section.cleaning.filled,
+.expand-section.cleaning.filled .expand-head {
+  background: #dcebf8 !important;
+  border-color: #2f6f9f !important;
+}
+
+.expand-section.behavior.filled,
+.expand-section.behavior.filled .expand-head {
+  background: #efdff5 !important;
+  border-color: #765088 !important;
+}
+
+/* Both medical sections match when filled */
+.expand-section.warning.filled,
+.expand-section.medication.filled,
+.expand-section.warning.filled .expand-head,
+.expand-section.medication.filled .expand-head {
+  background: #ffe8bd !important;
+  border-color: #b56d12 !important;
+}
+
+.expand-section.danger.filled,
+.expand-section.danger.filled .expand-head {
+  background: #ffe3e7 !important;
+  border-color: #c73f52 !important;
+}
+
+/* Filled labels should also be more noticeable */
+.section-right em {
+  background: white !important;
+  color: var(--ink) !important;
+  border: 2px solid var(--ink) !important;
+  opacity: 1 !important;
+}
+
+/* The + / - buttons keep their section identity */
+.expand-section.food .expand-head b {
+  background: #3f7f3d !important;
+}
+
+.expand-section.cleaning .expand-head b {
+  background: #2f6f9f !important;
+}
+
+.expand-section.behavior .expand-head b {
+  background: #765088 !important;
+}
+
+.expand-section.warning .expand-head b,
+.expand-section.medication .expand-head b {
+  background: #b56d12 !important;
+}
+
+.expand-section.danger .expand-head b {
+  background: #c73f52 !important;
+}
+
+
+/* v38: Apartment Log flow, name/time first, then collapsible shared-space sections */
+.apartment-log-form {
+  display: grid;
+  gap: 13px;
+}
+
+.apartment-log-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 950;
+  color: var(--ink);
+}
+
+.apartment-log-form input,
+.apartment-log-form select,
+.apartment-log-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+  padding: 12px 14px;
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.apartment-log-form textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.apartment-intro {
+  color: var(--muted);
+  font-weight: 760;
+  font-size: 17px;
+  text-align: center;
+}
+
+.apartment-section,
+.apartment-submit-row {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: white;
+}
+
+.apartment-section-head {
+  width: 100%;
+  border: 0;
+  background: white;
+  color: var(--ink);
+  padding: 14px 16px;
+  font-size: 18px;
+  font-weight: 950;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.apartment-section-head b {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+.apartment-section-body {
+  border-top: 1px solid var(--line);
+  padding: 14px 16px;
+  display: grid;
+  gap: 12px;
+}
+
+/* section colors */
+.apartment-section.area.empty,
+.apartment-section.area.empty .apartment-section-head {
+  background: #eef7ed;
+  border-color: #91bd8d;
+}
+
+.apartment-section.routine.empty,
+.apartment-section.routine.empty .apartment-section-head {
+  background: #eef5fc;
+  border-color: #9bbdde;
+}
+
+.apartment-section.safety.empty,
+.apartment-section.safety.empty .apartment-section-head {
+  background: #fff7e6;
+  border-color: #e0a64d;
+}
+
+.apartment-section.note.empty,
+.apartment-section.note.empty .apartment-section-head {
+  background: #faf7f0;
+  border-color: #d8d0c6;
+}
+
+.apartment-section.area.filled,
+.apartment-section.area.filled .apartment-section-head {
+  background: #dff2d7;
+  border-color: #3f7f3d;
+}
+
+.apartment-section.routine.filled,
+.apartment-section.routine.filled .apartment-section-head {
+  background: #dcebf8;
+  border-color: #2f6f9f;
+}
+
+.apartment-section.safety.filled,
+.apartment-section.safety.filled .apartment-section-head {
+  background: #ffe8bd;
+  border-color: #b56d12;
+}
+
+.apartment-section.note.filled,
+.apartment-section.note.filled .apartment-section-head {
+  background: #f1eadc;
+  border-color: #9a7a45;
+}
+
+.apartment-section.area .apartment-section-head b {
+  background: #3f7f3d;
+}
+
+.apartment-section.routine .apartment-section-head b {
+  background: #2f6f9f;
+}
+
+.apartment-section.safety .apartment-section-head b {
+  background: #b56d12;
+}
+
+.apartment-section.note .apartment-section-head b {
+  background: #625b47;
+}
+
+.apartment-submit-row {
+  padding: 12px 16px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.apartment-submit-row span {
+  color: var(--muted);
+  font-weight: 760;
+  font-size: 15px;
+}
+
+.modal-card:has(.apartment-log-form) {
+  width: min(980px, 100%);
+}
+
+@media (max-width: 900px) {
+  .apartment-submit-row {
+    grid-template-columns: 1fr;
+  }
+
+  .apartment-submit-row .submit-btn,
+  .apartment-submit-row .danger-outline {
+    width: 100%;
+  }
+}
+
+
+/* v39: multi-profile layout, global logs, mobile order */
+.workspace {
+  align-items: start;
+}
+
+.today-panel .stack {
+  max-height: 335px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Selected cats shown in Cat List like small file tabs */
+.cat-list-tabs {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  padding: 10px 12px 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  flex-wrap: wrap;
+  min-height: 46px;
+}
+
+.cat-list-tabs > span {
+  color: var(--muted);
+  font-weight: 800;
+  padding: 0 0 10px 3px;
+}
+
+.file-tab,
+.profile-file-tab {
+  border: 2px solid var(--line);
+  border-bottom: 0;
+  border-radius: 12px 12px 0 0;
+  background: #f3efe6;
+  color: var(--ink);
+  padding: 8px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 950;
+}
+
+.file-tab.active,
+.profile-file-tab.active {
+  background: white;
+  border-color: var(--ink);
+  padding-top: 11px;
+}
+
+.file-tab i,
+.profile-file-tab i {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #edf4f5;
+  border: 1px solid #c4d6d9;
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.file-tab b,
+.profile-file-tab b {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: white;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+  font-size: 13px;
+}
+
+/* Wider profile area with tabs on top-left */
+.profile-wide-wrap {
+  margin-top: 18px;
+}
+
+.profile-file-tabs {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-left: 18px;
+  margin-bottom: -2px;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-card.wide-profile,
+.empty-profile-card {
+  width: 100%;
+}
+
+.empty-profile-card {
+  display: block;
+  color: var(--muted);
+  font-weight: 850;
+  text-align: center;
+  padding: 24px;
+  border-style: dashed;
+}
+
+/* Change old pink-ish cat/log tiles toward neutral */
+.cat-tile {
+  background: #ffffff !important;
+}
+
+.cat-tile.selected {
+  background: #e8f2f4 !important;
+  border-color: #4f7781 !important;
+}
+
+.submitted-row {
+  background: #f4f4f1 !important;
+  border-color: #d3d1c9 !important;
+}
+
+.submitted-row i {
+  background: #f0f0ec !important;
+  border-color: #c8c8c0 !important;
+}
+
+/* Keep alerts yellow */
+.attention-row.warning,
+.attention-row.danger {
+  background: #fff2bd !important;
+}
+
+/* mobile/tablet: Today first, Cat List second, profile third and centered */
+@media (max-width: 900px) {
+  .workspace {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .today-panel {
+    order: 1 !important;
+    width: min(100%, 760px) !important;
+  }
+
+  .cat-list {
+    order: 2 !important;
+    width: min(100%, 760px) !important;
+  }
+
+  .profile-wide-wrap {
+    width: min(100%, 760px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  main {
+    text-align: initial;
+  }
+
+  .profile-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .profile-left {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profile-tags {
+    grid-template-columns: 1fr !important;
+  }
+
+  .plain-pill {
+    justify-self: center;
+  }
+
+  .topbar,
+  .hub-row {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .topbar {
+    align-items: center;
+  }
+
+  .page-tabs {
+    justify-content: center;
+  }
+}
+
+
+/* v40: picked cats disappear from the Cat List, and Clear clears picked cats too */
+
+/* fix the Cat List corner/border overlap */
+.workspace > aside.cat-list {
+  overflow: hidden !important;
+  border-radius: 18px !important;
+  background: white !important;
+  position: relative;
+}
+
+.workspace > aside.cat-list .card-head {
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+  margin: 0 !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* keep the file tabs from visually fighting with the card corners */
+.cat-list-tabs {
+  padding: 10px 12px 0 !important;
+  overflow: hidden;
+}
+
+/* picked cats are now represented by tabs only, not duplicated in the search list */
+.cat-tile.selected {
+  background: #ffffff !important;
+  border-color: var(--line) !important;
+}
+
+/* make the Clear button meaning clearer without adding clutter */
+.search-row button::after {
+  content: "";
+}
+
+/* mobile centering cleanup */
+@media (max-width: 900px) {
+  .workspace > aside.cat-list,
+  .today-panel,
+  .profile-wide-wrap {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .workspace > aside.cat-list {
+    width: min(100%, 760px) !important;
+  }
+}
+
+
+/* v43: equal-height fix without fixed heights.
+   The two desktop cards take the natural height of whichever card is taller. */
+
+.workspace {
+  align-items: stretch !important;
+}
+
+/* Remove the bad forced-height behavior from v41/v42-style overrides if present */
+.workspace > aside.cat-list,
+.today-panel {
+  height: auto !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Let CSS Grid do the equal-height work naturally */
+.workspace > aside.cat-list {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.workspace > aside.cat-list .cat-scroll {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+}
+
+/* Today panel should use normal document flow, not a forced grid */
+.today-panel {
+  display: block !important;
+}
+
+/* Keep each log area scrollable without overlapping the next section */
+.today-panel .mini-section {
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+.today-panel .stack {
+  max-height: 330px !important;
+  overflow-y: auto !important;
+  padding-right: 5px;
+}
+
+/* If there are many logs, only the logs list scrolls, not the whole card */
+.today-panel .mini-section:last-child .stack {
+  max-height: 315px !important;
+}
+
+/* No cats picked message should sit cleanly */
+.cat-list-tabs > span {
+  display: block;
+  padding: 10px 4px 12px !important;
+}
+
+/* Keep the cleaned-up card corners */
+.workspace > aside.cat-list {
+  border-radius: 18px !important;
+  background: white !important;
+}
+
+.workspace > aside.cat-list .card-head {
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+}
+
+/* Mobile/tablet: keep the natural stacked layout */
+@media (max-width: 900px) {
+  .workspace {
+    align-items: center !important;
+  }
+
+  .workspace > aside.cat-list,
+  .today-panel,
+  .profile-wide-wrap {
+    width: min(100%, 760px) !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+  }
+
+  .workspace > aside.cat-list .cat-scroll {
+    max-height: 420px !important;
+  }
+
+  .today-panel .stack {
+    max-height: 300px !important;
+  }
+}
+
+
+/* v44: keep Cat List rows the same shape even when search returns one cat */
+
+/* The scroll area should scroll, but rows should never stretch to fill the empty space */
+.workspace > aside.cat-list .cat-scroll,
+.cat-scroll {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  overflow-y: auto !important;
+}
+
+/* Force every cat tile to keep the normal compact row format */
+.cat-tile {
+  flex: 0 0 auto !important;
+  min-height: 112px !important;
+  height: auto !important;
+  align-self: stretch !important;
+  display: grid !important;
+  grid-template-columns: 54px 1fr auto !important;
+  gap: 14px !important;
+  align-items: center !important;
+  padding: 14px 16px !important;
+}
+
+/* Make sure the content inside the cat tile does not vertically center inside a giant stretched card */
+.cat-tile > div:not(.avatar) {
+  align-self: center !important;
+}
+
+.cat-tile small {
+  align-self: center !important;
+  justify-self: end !important;
+}
+
+/* Clean up the selected-file-tabs area so it does not create weird corner/spacing artifacts */
+.cat-list-tabs {
+  min-height: 52px !important;
+  align-items: flex-end !important;
+  border-bottom: 1px solid var(--line) !important;
+  overflow: visible !important;
+}
+
+.cat-list-tabs > span {
+  padding: 12px 4px 13px !important;
+}
+
+/* Remove the browser's pink focus ring and keep focus in the site style */
+.search-row input:focus,
+.catlog-search:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid rgba(23, 48, 51, .16) !important;
+  border-color: var(--ink) !important;
+  box-shadow: none !important;
+}
+
+/* Keep the Cat List card corners clean */
+.workspace > aside.cat-list {
+  overflow: hidden !important;
+}
+
+.workspace > aside.cat-list .card-head {
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+}
+
+/* Phone/tablet keeps the same row format, just slightly tighter */
+@media (max-width: 900px) {
+  .cat-tile {
+    min-height: 104px !important;
+    grid-template-columns: 52px 1fr auto !important;
+    padding: 13px 14px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .cat-tile {
+    grid-template-columns: 48px 1fr !important;
+  }
+
+  .cat-tile small {
+    grid-column: 2 !important;
+    justify-self: start !important;
+    width: fit-content !important;
+  }
+}
+
+
+/* v45: stop Cat List from cutting off halfway.
+   Desktop uses natural height: the taller card sets the height, and the other stretches. */
+.workspace {
+  align-items: stretch !important;
+}
+
+/* The Cat List should grow naturally with its cat rows on desktop */
+.workspace > aside.cat-list,
+.workspace > aside.cat-list .cat-scroll {
+  height: auto !important;
+  max-height: none !important;
+  min-height: 0 !important;
+}
+
+.workspace > aside.cat-list {
+  display: block !important;
+  overflow: hidden !important;
+}
+
+/* Do not make the cat list's inner row area flex-fill a large blank space */
+.workspace > aside.cat-list .cat-scroll,
+.cat-scroll {
+  display: grid !important;
+  grid-auto-rows: auto !important;
+  align-content: start !important;
+  justify-content: stretch !important;
+  gap: 12px !important;
+  overflow: visible !important;
+  padding-bottom: 16px !important;
+}
+
+/* Rows stay compact and never stretch */
+.cat-tile {
+  min-height: 112px !important;
+  height: auto !important;
+  align-self: auto !important;
+}
+
+/* Today panel can stretch to match Cat List, but its inner lists scroll if needed */
+.today-panel {
+  height: auto !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  display: block !important;
+}
+
+.today-panel .stack {
+  max-height: 330px !important;
+  overflow-y: auto !important;
+  padding-right: 5px !important;
+}
+
+/* Mobile/tablet: keep reasonable internal scroll so the page is not endless */
+@media (max-width: 900px) {
+  .workspace > aside.cat-list .cat-scroll,
+  .cat-scroll {
+    max-height: 520px !important;
+    overflow-y: auto !important;
+  }
+
+  .today-panel .stack {
+    max-height: 300px !important;
+  }
+}
+
+
+/* v48: corrected height fix from v45.
+   Today panel keeps its natural height.
+   Cat List uses that exact height through --today-panel-height.
+   No fixed 650px and no layout overlap. */
+
+.workspace {
+  align-items: start !important;
+}
+
+/* Today is the source of truth for height */
+.today-panel {
+  height: auto !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  display: block !important;
+  overflow: hidden !important;
+}
+
+/* Cat List copies Today height by CSS variable.
+   This overrides older v45 height:auto!important rules correctly. */
+.workspace > aside.cat-list {
+  height: var(--today-panel-height, auto) !important;
+  max-height: var(--today-panel-height, none) !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border-radius: 18px !important;
+  background: white !important;
+}
+
+/* Cat List rows scroll inside copied height */
+.workspace > aside.cat-list .cat-scroll,
+.cat-scroll {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow-y: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  padding-bottom: 16px !important;
+}
+
+/* Rows keep the normal compact format */
+.cat-tile {
+  flex: 0 0 auto !important;
+  min-height: 112px !important;
+  height: auto !important;
+  display: grid !important;
+  grid-template-columns: 54px 1fr auto !important;
+  gap: 14px !important;
+  align-items: center !important;
+  padding: 14px 16px !important;
+}
+
+/* Today lists scroll inside their own areas only if needed */
+.today-panel .stack {
+  max-height: 310px !important;
+  overflow-y: auto !important;
+  padding-right: 5px !important;
+}
+
+/* Search result with one cat must stay compact */
+.cat-scroll:has(.cat-tile:only-child) {
+  justify-content: flex-start !important;
+}
+
+.cat-scroll:has(.cat-tile:only-child) .cat-tile {
+  flex: 0 0 auto !important;
+}
+
+/* Mobile/tablet: no measured height, natural stacked layout */
+@media (max-width: 900px) {
+  .workspace {
+    align-items: center !important;
+  }
+
+  .workspace > aside.cat-list,
+  .today-panel,
+  .profile-wide-wrap {
+    width: min(100%, 760px) !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+  }
+
+  .workspace > aside.cat-list .cat-scroll,
+  .cat-scroll {
+    max-height: 520px !important;
+    overflow-y: auto !important;
+  }
+
+  .today-panel .stack {
+    max-height: 300px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .cat-tile {
+    grid-template-columns: 48px 1fr !important;
+  }
+
+  .cat-tile small {
+    grid-column: 2 !important;
+    justify-self: start !important;
+    width: fit-content !important;
+  }
+}
+
+
+/* v49: selected profile daily logs with calendar date picker */
+.profile-day-logs {
+  border-top: 1px solid var(--line);
+  margin-top: 18px;
+  padding-top: 16px;
+}
+
+.profile-log-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.profile-log-toolbar p {
+  margin-right: auto;
+  color: var(--muted);
+  font-weight: 760;
+  font-size: 15px;
+}
+
+.profile-log-toolbar label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--muted);
+  font-weight: 950;
+}
+
+.profile-log-toolbar input[type="date"] {
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  padding: 9px 14px;
+  font: inherit;
+  font-weight: 950;
+  min-width: 170px;
+}
+
+.profile-log-list {
+  display: grid;
+  gap: 10px;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.profile-log-row {
+  border: 1px solid #d3d1c9;
+  border-radius: 14px;
+  background: #f4f4f1;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.profile-log-row.alert {
+  background: #fff2bd;
+  border-color: #e2b96b;
+}
+
+.profile-log-row i {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  font-weight: 950;
+  background: #f0f0ec;
+  border: 2px solid #c8c8c0;
+}
+
+.profile-log-row.alert i {
+  background: #fff8dc;
+  border-color: #d8b46b;
+}
+
+.profile-log-row strong {
+  display: block;
+  font-size: 17px;
+}
+
+.profile-log-row p {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.profile-log-row button {
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  padding: 8px 13px;
+  font-weight: 950;
+}
+
+.profile-log-empty {
+  margin: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #f4f4f1;
+}
+
+@media (max-width: 900px) {
+  .profile-log-toolbar {
+    justify-content: flex-start;
+  }
+
+  .profile-log-toolbar p {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .profile-log-toolbar label {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .profile-log-toolbar input[type="date"] {
+    width: 100%;
+    border-radius: 14px;
+  }
+
+  .profile-log-row {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .profile-log-row button {
+    grid-column: 2;
+    width: fit-content;
+  }
+}
+
+
+/* v50: make profile daily logs match the approved screenshot more closely */
+.profile-day-logs {
+  border-top: 1px solid var(--line) !important;
+  margin-top: 20px !important;
+  padding-top: 20px !important;
+}
+
+.profile-log-toolbar {
+  display: grid !important;
+  grid-template-columns: 1fr auto !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin-bottom: 14px !important;
+}
+
+.profile-log-toolbar p {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-weight: 850 !important;
+  font-size: 17px !important;
+  line-height: 1.25 !important;
+}
+
+.profile-log-toolbar label {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  color: var(--muted) !important;
+  font-weight: 950 !important;
+  font-size: 17px !important;
+  white-space: nowrap !important;
+}
+
+.profile-log-toolbar label span {
+  color: var(--muted) !important;
+  font-weight: 950 !important;
+}
+
+.profile-log-toolbar input[type="date"] {
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  background: white !important;
+  color: var(--ink) !important;
+  padding: 10px 16px !important;
+  font: inherit !important;
+  font-weight: 950 !important;
+  min-width: 185px !important;
+  text-align: center !important;
+  letter-spacing: .02em !important;
+}
+
+.profile-log-list {
+  display: grid !important;
+  gap: 10px !important;
+  max-height: 270px !important;
+  overflow-y: auto !important;
+  padding-right: 4px !important;
+}
+
+.profile-log-row {
+  border: 1px solid #d3d1c9 !important;
+  border-radius: 14px !important;
+  background: #f4f4f1 !important;
+  padding: 13px 14px !important;
+  display: grid !important;
+  grid-template-columns: 44px 1fr auto !important;
+  gap: 14px !important;
+  align-items: center !important;
+}
+
+.profile-log-row.alert {
+  background: #fff2bd !important;
+  border-color: #e2b96b !important;
+}
+
+.profile-log-row i {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  display: grid !important;
+  place-items: center !important;
+  font-style: normal !important;
+  font-weight: 950 !important;
+  background: #f0f0ec !important;
+  border: 2px solid #c8c8c0 !important;
+  color: var(--ink) !important;
+}
+
+.profile-log-row.alert i {
+  background: #fff8dc !important;
+  border-color: #d8b46b !important;
+}
+
+.profile-log-row strong {
+  display: block !important;
+  color: var(--ink) !important;
+  font-size: 18px !important;
+  line-height: 1.05 !important;
+  margin-bottom: 3px !important;
+}
+
+.profile-log-row p {
+  color: var(--muted) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  margin: 0 !important;
+}
+
+.profile-log-row button {
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  background: white !important;
+  color: var(--ink) !important;
+  padding: 9px 16px !important;
+  font-weight: 950 !important;
+  min-width: 106px !important;
+}
+
+.profile-log-empty {
+  margin: 0 !important;
+  padding: 14px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+  background: #f4f4f1 !important;
+  color: var(--muted) !important;
+  font-weight: 850 !important;
+}
+
+/* Keep the profile card wide and the log block contained */
+.profile-card.wide-profile {
+  overflow: visible !important;
+}
+
+@media (max-width: 900px) {
+  .profile-log-toolbar {
+    grid-template-columns: 1fr !important;
+    align-items: stretch !important;
+  }
+
+  .profile-log-toolbar label {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+  }
+
+  .profile-log-toolbar input[type="date"] {
+    width: 100% !important;
+    border-radius: 14px !important;
+  }
+
+  .profile-log-row {
+    grid-template-columns: 42px 1fr !important;
+  }
+
+  .profile-log-row button {
+    grid-column: 2 !important;
+    width: fit-content !important;
+  }
+}
+
+
+/* v52: undo v51 direction, make profile/log area wider, improve phone profile readability */
+
+/* Make the selected profile card use the available width better */
+.profile-wide-wrap,
+.profile-card.wide-profile {
+  width: 100% !important;
+}
+
+.profile-card.wide-profile {
+  padding: 24px 24px 22px !important;
+}
+
+/* Wider profile fields on desktop, still organized */
+.profile-card.wide-profile .profile-tags {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+.profile-day-logs {
+  width: 100% !important;
+}
+
+/* Make daily log rows feel wider and closer to the screenshot */
+.profile-log-list {
+  width: 100% !important;
+}
+
+.profile-log-row {
+  width: 100% !important;
+  grid-template-columns: 44px minmax(0, 1fr) auto !important;
+}
+
+/* Keep v50 colors, not the v51 white-only direction */
+.profile-log-row {
+  background: #f4f4f1 !important;
+  border-color: #d3d1c9 !important;
+}
+
+.profile-log-row.alert {
+  background: #fff2bd !important;
+  border-color: #e2b96b !important;
+}
+
+/* Phone/tablet: make words bigger and keep Edit profile at the top right */
+@media (max-width: 900px) {
+  .profile-card.wide-profile {
+    position: relative !important;
+    padding: 22px 18px 20px !important;
+  }
+
+  .profile-card.wide-profile .profile-left {
+    display: grid !important;
+    grid-template-columns: 86px 1fr !important;
+    gap: 14px !important;
+    align-items: start !important;
+    justify-content: start !important;
+    text-align: left !important;
+    padding-right: 132px !important;
+  }
+
+  .profile-card.wide-profile .photo {
+    width: 82px !important;
+    height: 74px !important;
+  }
+
+  .profile-card.wide-profile h2 {
+    font-size: 42px !important;
+    line-height: .95 !important;
+  }
+
+  .profile-card.wide-profile .eyebrow {
+    font-size: 13px !important;
+    letter-spacing: .16em !important;
+  }
+
+  .profile-card.wide-profile .profile-left p {
+    font-size: 18px !important;
+    line-height: 1.25 !important;
+  }
+
+  .profile-card.wide-profile .plain-pill {
+    position: absolute !important;
+    top: 22px !important;
+    right: 18px !important;
+    justify-self: unset !important;
+    width: auto !important;
+    padding: 10px 14px !important;
+    font-size: 16px !important;
+    z-index: 3 !important;
+  }
+
+  .profile-card.wide-profile .profile-tags {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-top: 18px !important;
+  }
+
+  .profile-card.wide-profile .profile-tags span {
+    padding: 12px 14px !important;
+  }
+
+  .profile-card.wide-profile .profile-tags b {
+    font-size: 14px !important;
+    letter-spacing: .13em !important;
+  }
+
+  .profile-card.wide-profile .profile-tags span {
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+  }
+
+  .profile-log-toolbar p {
+    font-size: 18px !important;
+    line-height: 1.25 !important;
+  }
+
+  .profile-log-toolbar label {
+    font-size: 18px !important;
+  }
+
+  .profile-log-row {
+    grid-template-columns: 44px 1fr !important;
+    padding: 14px !important;
+  }
+
+  .profile-log-row strong {
+    font-size: 19px !important;
+  }
+
+  .profile-log-row p {
+    font-size: 17px !important;
+    line-height: 1.25 !important;
+  }
+
+  .profile-log-row button {
+    grid-column: 2 !important;
+    width: fit-content !important;
+    font-size: 17px !important;
+  }
+}
+
+/* Very small phones: avoid the edit button covering the name */
+@media (max-width: 560px) {
+  .profile-card.wide-profile {
+    padding: 18px 14px 18px !important;
+  }
+
+  .profile-card.wide-profile .profile-left {
+    grid-template-columns: 76px 1fr !important;
+    padding-right: 0 !important;
+    padding-top: 54px !important;
+  }
+
+  .profile-card.wide-profile .photo {
+    width: 72px !important;
+    height: 66px !important;
+  }
+
+  .profile-card.wide-profile h2 {
+    font-size: 38px !important;
+  }
+
+  .profile-card.wide-profile .plain-pill {
+    top: 14px !important;
+    right: 14px !important;
+  }
+}
+
+
+/* v53: make selected-cat daily logs actually run end-to-end inside the profile card */
+
+/* The log section should span the full profile card width, not sit inside a narrow inner column */
+.profile-card.wide-profile .profile-day-logs {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  max-width: none !important;
+  justify-self: stretch !important;
+  align-self: stretch !important;
+}
+
+/* Make the toolbar, divider, and list use the whole available width */
+.profile-card.wide-profile .profile-log-toolbar,
+.profile-card.wide-profile .profile-log-list {
+  width: 100% !important;
+  max-width: none !important;
+  justify-self: stretch !important;
+}
+
+/* Each daily log row should go from left content edge to right content edge */
+.profile-card.wide-profile .profile-log-row {
+  width: 100% !important;
+  max-width: none !important;
+  justify-self: stretch !important;
+  display: grid !important;
+  grid-template-columns: 44px minmax(0, 1fr) auto !important;
+}
+
+/* Remove any accidental width limiting from profile/log wrappers */
+.profile-wide-wrap,
+.profile-card.wide-profile,
+.profile-card.wide-profile > * {
+  max-width: none !important;
+}
+
+/* Keep the profile info grid wide too */
+.profile-card.wide-profile .profile-tags {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* On phone, the log section still spans the full card width */
+@media (max-width: 900px) {
+  .profile-card.wide-profile .profile-day-logs {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+  }
+
+  .profile-card.wide-profile .profile-log-row {
+    width: 100% !important;
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+  }
+
+  .profile-card.wide-profile .profile-log-row button {
+    grid-column: 2 !important;
+    width: fit-content !important;
+  }
+}
+
+
+/* v55: phone Cat List text bigger only, without changing the row/card format */
+@media (max-width: 900px) {
+  .workspace > aside.cat-list .card-head .eyebrow {
+    font-size: 14px !important;
+  }
+
+  .workspace > aside.cat-list .card-head h2 {
+    font-size: 46px !important;
+  }
+
+  .workspace > aside.cat-list .search-row input {
+    font-size: 20px !important;
+  }
+
+  .workspace > aside.cat-list .search-row button {
+    font-size: 19px !important;
+  }
+
+  .cat-list-tabs > span {
+    font-size: 20px !important;
+  }
+
+  .file-tab {
+    font-size: 20px !important;
+  }
+
+  .cat-tile strong {
+    font-size: 24px !important;
+    line-height: 1.05 !important;
+  }
+
+  .cat-tile p,
+  .cat-tile em {
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+  }
+
+  .cat-tile small {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .workspace > aside.cat-list .card-head h2 {
+    font-size: 44px !important;
+  }
+
+  .cat-tile strong {
+    font-size: 23px !important;
+  }
+
+  .cat-tile p,
+  .cat-tile em {
+    font-size: 19px !important;
+  }
+
+  .cat-tile small {
+    font-size: 17px !important;
+  }
+}
+
+
+/* v56: phone/tablet text tuning only.
+   Cat List text is slightly reduced from v55, and Today panel text is slightly bigger.
+   No row/card format changes. */
+
+@media (max-width: 900px) {
+  /* Cat List: still bigger than original, but less oversized than v55 */
+  .workspace > aside.cat-list .card-head .eyebrow {
+    font-size: 13px !important;
+  }
+
+  .workspace > aside.cat-list .card-head h2 {
+    font-size: 43px !important;
+  }
+
+  .workspace > aside.cat-list .search-row input {
+    font-size: 19px !important;
+  }
+
+  .workspace > aside.cat-list .search-row button {
+    font-size: 18px !important;
+  }
+
+  .cat-list-tabs > span {
+    font-size: 18px !important;
+  }
+
+  .file-tab {
+    font-size: 18px !important;
+  }
+
+  .cat-tile strong {
+    font-size: 22px !important;
+    line-height: 1.08 !important;
+  }
+
+  .cat-tile p,
+  .cat-tile em {
+    font-size: 18px !important;
+    line-height: 1.22 !important;
+  }
+
+  .cat-tile small {
+    font-size: 16px !important;
+  }
+
+  /* Today panel: slightly bigger text, same layout */
+  .today-panel h2 {
+    font-size: 43px !important;
+    line-height: .96 !important;
+  }
+
+  .today-panel .panel-title p,
+  .today-panel .mini-section-head p {
+    font-size: 17px !important;
+    line-height: 1.25 !important;
+  }
+
+  .today-panel .mini-section-head h3 {
+    font-size: 24px !important;
+    line-height: 1.1 !important;
+  }
+
+  .attention-row strong,
+  .submitted-row strong {
+    font-size: 20px !important;
+    line-height: 1.1 !important;
+  }
+
+  .attention-row p,
+  .submitted-row p {
+    font-size: 17px !important;
+    line-height: 1.2 !important;
+  }
+
+  .attention-row button,
+  .submitted-row button {
+    font-size: 17px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .workspace > aside.cat-list .card-head h2 {
+    font-size: 41px !important;
+  }
+
+  .cat-tile strong {
+    font-size: 21px !important;
+  }
+
+  .cat-tile p,
+  .cat-tile em {
+    font-size: 17px !important;
+  }
+
+  .cat-tile small {
+    font-size: 15px !important;
+  }
+
+  .today-panel h2 {
+    font-size: 39px !important;
+  }
+
+  .today-panel .mini-section-head h3 {
+    font-size: 22px !important;
+  }
+
+  .attention-row strong,
+  .submitted-row strong {
+    font-size: 19px !important;
+  }
+
+  .attention-row p,
+  .submitted-row p {
+    font-size: 16px !important;
+  }
+}
+
+
+/* v57: center top action buttons, make top navigation text bigger on phone, add hover pulse */
+
+/* Center the Cat Log / Apartment Log / Alerts buttons */
+.hub-row {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Desktop hover pulse for the top action buttons and nav items */
+.hub-row button,
+.page-tabs button,
+.page-tabs a {
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hub-row button:hover,
+  .page-tabs button:hover,
+  .page-tabs a:hover {
+    transform: scale(1.045) !important;
+    box-shadow: 0 8px 18px rgba(23, 48, 51, .08) !important;
+  }
+
+  .hub-row button:hover {
+    background: #eef6ed !important;
+    border-color: var(--ink) !important;
+  }
+
+  .hub-row .alert-pill:hover,
+  .hub-row .alerts:hover {
+    background: #fff2bd !important;
+  }
+}
+
+/* Press feedback works on phone too without changing layout */
+.hub-row button:active,
+.page-tabs button:active,
+.page-tabs a:active {
+  transform: scale(.98) !important;
+}
+
+/* Phone/tablet: make nav text bigger, not the pills */
+@media (max-width: 900px) {
+  .page-tabs {
+    justify-content: center !important;
+    gap: 20px !important;
+  }
+
+  .page-tabs button,
+  .page-tabs a {
+    font-size: 21px !important;
+    line-height: 1.15 !important;
+  }
+
+  .hub-row {
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-tabs {
+    gap: 14px !important;
+  }
+
+  .page-tabs button,
+  .page-tabs a {
+    font-size: 19px !important;
+  }
+
+  .hub-row {
+    gap: 10px !important;
+  }
+}
+
+
+/* v58: keep hover pulse, but do NOT change the button colors */
+@media (hover: hover) and (pointer: fine) {
+  .hub-row button:hover,
+  .page-tabs button:hover,
+  .page-tabs a:hover {
+    transform: scale(1.045) !important;
+    box-shadow: 0 8px 18px rgba(23, 48, 51, .08) !important;
+  }
+
+  /* Undo v57 color change */
+  .hub-row button:hover {
+    background: inherit !important;
+    color: inherit !important;
+    border-color: var(--ink) !important;
+  }
+
+  .hub-row .alert-pill:hover,
+  .hub-row .alerts:hover {
+    background: #fff2bd !important;
+    color: var(--ink) !important;
+  }
+}
+
+/* Preserve original Cat Log / Apartment Log pill colors while hovering */
+.hub-row button:not(.alert-pill):not(.alerts):hover {
+  background: white !important;
+  color: var(--ink) !important;
+}
+
+/* If a pill is already active/dark, keep it dark on hover */
+.hub-row button.active:hover,
+.hub-row button.is-active:hover {
+  background: var(--ink) !important;
+  color: white !important;
+}
+
+
+/* v59: center top action buttons and restore the dark green hover */
+.hub-row {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+/* Some versions had the buttons inside a wrapper/main area, so force that row to center too */
+.hub-row > *,
+.top-actions,
+.action-pills {
+  justify-content: center !important;
+}
+
+/* Restore the original dark green hover, while keeping default colors unchanged */
+@media (hover: hover) and (pointer: fine) {
+  .hub-row button:not(.alert-pill):not(.alerts):hover {
+    background: var(--ink) !important;
+    color: #ffffff !important;
+    border-color: var(--ink) !important;
+    transform: scale(1.045) !important;
+    box-shadow: 0 8px 18px rgba(23, 48, 51, .10) !important;
+  }
+
+  .hub-row button:not(.alert-pill):not(.alerts):hover .plus,
+  .hub-row button:not(.alert-pill):not(.alerts):hover span:first-child {
+    background: #ffffff !important;
+    color: var(--ink) !important;
+    border-color: #ffffff !important;
+  }
+
+  /* Alerts keeps yellow, but still pulses */
+  .hub-row .alert-pill:hover,
+  .hub-row .alerts:hover {
+    background: #fff2bd !important;
+    color: var(--ink) !important;
+    border-color: var(--ink) !important;
+    transform: scale(1.045) !important;
+    box-shadow: 0 8px 18px rgba(23, 48, 51, .10) !important;
+  }
+}
+
+/* Phone/tablet: keep them centered too */
+@media (max-width: 900px) {
+  .hub-row {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+}
+
+
+/* v60: correct top action row behavior */
+
+/* Center the actual pill row, including phone widths */
+main > .hub-row.hub-pills,
+.hub-row.hub-pills {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+/* Pulse animation */
+@keyframes meowPulse {
+  0% { transform: scale(1.025); }
+  100% { transform: scale(1.055); }
+}
+
+/* Default colors stay normal */
+.hub-row.hub-pills .hub-pill.action {
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  border-color: var(--ink) !important;
+}
+
+.hub-row.hub-pills .hub-pill.alert {
+  background: #fff2bd !important;
+  color: var(--ink) !important;
+  border-color: var(--ink) !important;
+}
+
+.hub-row.hub-pills .hub-pill.alert .alert-badge {
+  background: #c64a4a !important;
+  color: #ffffff !important;
+}
+
+/* Desktop hover: only Cat Log + Apartment Log turn dark green */
+@media (hover: hover) and (pointer: fine) {
+  .hub-row.hub-pills .hub-pill.action:hover {
+    background: var(--ink) !important;
+    color: #ffffff !important;
+    border-color: var(--ink) !important;
+    animation: meowPulse 520ms ease-in-out infinite alternate !important;
+    box-shadow: 0 8px 18px rgba(23, 48, 51, .10) !important;
+  }
+
+  .hub-row.hub-pills .hub-pill.action:hover .plus {
+    background: #ffffff !important;
+    color: var(--ink) !important;
+    border-color: #ffffff !important;
+  }
+
+  /* Alert NEVER turns dark green. It stays yellow, just pulses. */
+  .hub-row.hub-pills .hub-pill.alert:hover {
+    background: #fff2bd !important;
+    color: var(--ink) !important;
+    border-color: var(--ink) !important;
+    animation: meowPulse 520ms ease-in-out infinite alternate !important;
+    box-shadow: 0 8px 18px rgba(23, 48, 51, .10) !important;
+  }
+
+  .hub-row.hub-pills .hub-pill.alert:hover .alert-badge {
+    background: #c64a4a !important;
+    color: #ffffff !important;
+  }
+}
+
+/* Phone/tablet: keep row centered and avoid weird left sticking */
+@media (max-width: 900px) {
+  main > .hub-row.hub-pills,
+  .hub-row.hub-pills {
+    width: 100% !important;
+    justify-content: center !important;
+    justify-items: center !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Small phones: center even when the pills wrap */
+@media (max-width: 560px) {
+  main > .hub-row.hub-pills,
+  .hub-row.hub-pills {
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+}
+
+
+/* v61: Help / Handbook popup and full PDF viewer */
+.handbook-card {
+  width: min(760px, 100%) !important;
+}
+
+.handbook-top {
+  align-items: center !important;
+}
+
+.handbook-top h2,
+.handbook-viewer-top h2 {
+  margin: 3px 0 0 !important;
+  color: var(--ink) !important;
+}
+
+.handbook-body {
+  display: grid !important;
+  gap: 14px !important;
+  background: #ffffff !important;
+}
+
+.handbook-hero {
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  background: var(--cream) !important;
+  padding: 16px !important;
+  display: grid !important;
+  grid-template-columns: 1fr auto !important;
+  gap: 16px !important;
+  align-items: center !important;
+}
+
+.handbook-hero h3 {
+  margin: 0 0 5px !important;
+  font-size: 22px !important;
+  color: var(--ink) !important;
+}
+
+.handbook-hero p,
+.handbook-note {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  line-height: 1.35 !important;
+}
+
+.handbook-main-btn {
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  background: var(--ink) !important;
+  color: #ffffff !important;
+  padding: 12px 17px !important;
+  font-weight: 950 !important;
+  white-space: nowrap !important;
+  transition: transform 160ms ease, box-shadow 160ms ease !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .handbook-main-btn:hover {
+    transform: scale(1.035) !important;
+    box-shadow: 0 8px 18px rgba(23, 48, 51, .12) !important;
+  }
+}
+
+.handbook-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+.handbook-tile {
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  padding: 14px !important;
+}
+
+.handbook-tile strong {
+  display: block !important;
+  color: var(--ink) !important;
+  font-size: 18px !important;
+  margin-bottom: 5px !important;
+}
+
+.handbook-tile p {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  line-height: 1.32 !important;
+}
+
+.handbook-tile.cat {
+  background: #edf7ec !important;
+  border-color: #c9ddc6 !important;
+}
+
+.handbook-tile.apartment {
+  background: #edf3fa !important;
+  border-color: #c8d5e2 !important;
+}
+
+.handbook-tile.alert {
+  background: #fff1b8 !important;
+  border-color: #e2b36d !important;
+}
+
+.handbook-tile.handbook {
+  background: #fbf7f2 !important;
+  border-color: var(--line) !important;
+}
+
+.handbook-note {
+  border-left: 4px solid var(--ink) !important;
+  background: #fbf7f2 !important;
+  border-radius: 10px !important;
+  padding: 11px 13px !important;
+}
+
+/* PDF viewer popup */
+.handbook-viewer-card {
+  width: min(1120px, calc(100vw - 28px)) !important;
+  height: min(88vh, 860px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.handbook-viewer-top {
+  flex: 0 0 auto !important;
+}
+
+.handbook-actions {
+  display: flex !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+}
+
+.handbook-pdf-wrap {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  background: #f4f1ea !important;
+  padding: 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.handbook-pdf-wrap iframe {
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 12px !important;
+  background: white !important;
+}
+
+.handbook-pdf-fallback {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  align-items: center !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  font-size: 13px !important;
+}
+
+.handbook-pdf-fallback p {
+  margin: 0 !important;
+}
+
+.handbook-pdf-fallback a {
+  color: var(--ink) !important;
+  font-weight: 950 !important;
+}
+
+@media (max-width: 900px) {
+  .handbook-hero {
+    grid-template-columns: 1fr !important;
+  }
+
+  .handbook-main-btn {
+    width: fit-content !important;
+  }
+
+  .handbook-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .handbook-viewer-card {
+    width: min(100%, calc(100vw - 18px)) !important;
+    height: 88vh !important;
+  }
+
+  .handbook-viewer-top {
+    align-items: stretch !important;
+  }
+
+  .handbook-actions {
+    justify-content: flex-start !important;
+  }
+
+  .handbook-pdf-wrap {
+    padding: 8px !important;
+  }
+
+  .handbook-pdf-fallback {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+}
+
+
+/* v62: uploaded logo in the top brand */
+.logo.logo-image {
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  width: 58px !important;
+  height: 58px !important;
+  display: grid !important;
+  place-items: center !important;
+}
+
+.logo.logo-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* v62: handbook hub based on the provided mockup, but matched to the current palette */
+.handbook-hub-card {
+  width: min(1080px, calc(100vw - 28px)) !important;
+  max-height: 88vh !important;
+  overflow: auto !important;
+  border-radius: 18px !important;
+  background: #fffdfb !important;
+  border: 2px solid var(--ink) !important;
+  position: relative !important;
+}
+
+.handbook-x {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 999px !important;
+  border: 0 !important;
+  background: #8f7df2 !important;
+  color: #ffffff !important;
+  font-weight: 950 !important;
+  display: grid !important;
+  place-items: center !important;
+}
+
+.handbook-hub-top {
+  display: grid !important;
+  grid-template-columns: 1fr auto !important;
+  gap: 28px !important;
+  align-items: start !important;
+  padding: 22px 22px 14px !important;
+}
+
+.handbook-hub-top h2 {
+  margin: 0 0 8px !important;
+  color: var(--ink) !important;
+  font-size: 28px !important;
+  line-height: 1.05 !important;
+  text-align: left !important;
+}
+
+.handbook-hub-top p {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  line-height: 1.35 !important;
+  max-width: 660px !important;
+}
+
+.handbook-full-pdf {
+  background: #fff176 !important;
+  color: var(--ink) !important;
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  padding: 12px 22px !important;
+  font-weight: 950 !important;
+  box-shadow: 0 4px 0 rgba(23, 48, 51, .18) !important;
+  min-width: 190px !important;
+}
+
+.handbook-filter-box {
+  margin: 0 22px 18px !important;
+  border: 1px solid #ead7d2 !important;
+  border-radius: 16px !important;
+  background: #fffaf7 !important;
+  padding: 12px !important;
+}
+
+.handbook-filter-box input {
+  width: 100% !important;
+  border: 2px solid #f2a2af !important;
+  border-radius: 10px !important;
+  padding: 12px 14px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  font: inherit !important;
+  font-weight: 760 !important;
+}
+
+.handbook-filter-pills {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-top: 10px !important;
+}
+
+.handbook-filter-pills button {
+  border: 1px solid #ead7d2 !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  border-radius: 999px !important;
+  padding: 9px 13px !important;
+  font-weight: 950 !important;
+}
+
+.handbook-filter-pills button.active {
+  background: var(--ink) !important;
+  color: #ffffff !important;
+  border-color: var(--ink) !important;
+}
+
+.handbook-status {
+  background: #edf3fa !important;
+  border: 1px solid #bfd3ee !important;
+  border-radius: 10px !important;
+  padding: 9px 12px !important;
+  margin-top: 10px !important;
+  color: var(--ink) !important;
+  font-weight: 900 !important;
+}
+
+.handbook-hub-grid {
+  display: grid !important;
+  grid-template-columns: 370px 1fr !important;
+  gap: 14px !important;
+  padding: 0 22px 22px !important;
+}
+
+.handbook-list,
+.handbook-detail {
+  border: 1px solid #ead7d2 !important;
+  border-radius: 16px !important;
+  background: #fffdfb !important;
+}
+
+.handbook-list {
+  padding: 12px !important;
+  max-height: 58vh !important;
+  overflow: auto !important;
+}
+
+.handbook-group h3 {
+  margin: 14px 0 6px !important;
+  color: #a4454f !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .08em !important;
+}
+
+.handbook-group:first-child h3 {
+  margin-top: 0 !important;
+}
+
+.handbook-list button {
+  width: 100% !important;
+  text-align: left !important;
+  border: 1px solid #ead7d2 !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 11px !important;
+  margin: 7px 0 !important;
+  color: var(--ink) !important;
+}
+
+.handbook-list button.active,
+.handbook-list button:hover {
+  border-color: var(--ink) !important;
+  background: #fff8ed !important;
+}
+
+.handbook-list button strong {
+  display: block !important;
+  font-size: 17px !important;
+  line-height: 1.1 !important;
+}
+
+.handbook-list button span {
+  display: block !important;
+  margin-top: 4px !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+}
+
+.handbook-empty {
+  color: var(--muted) !important;
+  font-weight: 800 !important;
+}
+
+.handbook-detail {
+  padding: 18px !important;
+  min-height: 430px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.handbook-detail h2 {
+  margin: 0 !important;
+  text-align: left !important;
+  font-size: 28px !important;
+  color: var(--ink) !important;
+}
+
+.handbook-detail p {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  line-height: 1.4 !important;
+  font-size: 18px !important;
+}
+
+.handbook-callout {
+  border: 2px solid #d38a20 !important;
+  background: #fff1bf !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  color: var(--ink) !important;
+  font-weight: 850 !important;
+}
+
+.handbook-mini-cards {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  margin-top: auto !important;
+}
+
+.handbook-mini-cards article {
+  border: 1px solid #ead7d2 !important;
+  border-radius: 14px !important;
+  background: #ffffff !important;
+  padding: 12px !important;
+}
+
+.handbook-mini-cards strong {
+  display: block !important;
+  color: var(--ink) !important;
+  margin-bottom: 5px !important;
+}
+
+.handbook-mini-cards p {
+  font-size: 14px !important;
+  line-height: 1.3 !important;
+}
+
+/* v62: full PDF viewer realigns better on phone */
+.handbook-viewer-card {
+  width: min(1120px, calc(100vw - 24px)) !important;
+  height: min(90vh, 900px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.handbook-pdf-wrap {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  background: #f4f1ea !important;
+  padding: 12px !important;
+}
+
+.handbook-pdf-wrap iframe {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+}
+
+.handbook-pdf-fallback {
+  flex: 0 0 auto !important;
+}
+
+@media (max-width: 900px) {
+  .logo.logo-image {
+    width: 54px !important;
+    height: 54px !important;
+  }
+
+  .handbook-hub-card {
+    width: min(100%, calc(100vw - 16px)) !important;
+    max-height: 90vh !important;
+  }
+
+  .handbook-hub-top {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding: 20px 18px 12px !important;
+    padding-right: 56px !important;
+  }
+
+  .handbook-hub-top h2 {
+    font-size: 26px !important;
+  }
+
+  .handbook-full-pdf {
+    width: fit-content !important;
+    min-width: 0 !important;
+  }
+
+  .handbook-filter-box {
+    margin: 0 18px 14px !important;
+  }
+
+  .handbook-hub-grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 18px 18px !important;
+  }
+
+  .handbook-list {
+    max-height: 280px !important;
+  }
+
+  .handbook-detail {
+    min-height: auto !important;
+  }
+
+  .handbook-mini-cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  .handbook-viewer-card {
+    width: min(100%, calc(100vw - 12px)) !important;
+    height: 92vh !important;
+    max-height: 92vh !important;
+  }
+
+  .handbook-viewer-top {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    align-items: start !important;
+  }
+
+  .handbook-actions {
+    justify-content: flex-start !important;
+  }
+
+  .handbook-pdf-wrap {
+    padding: 8px !important;
+    overflow: hidden !important;
+  }
+
+  .handbook-pdf-wrap iframe {
+    height: 100% !important;
+    border-radius: 10px !important;
+  }
+
+  .handbook-pdf-fallback {
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .handbook-filter-pills button {
+    padding: 8px 10px !important;
+    font-size: 14px !important;
+  }
+
+  .handbook-detail h2 {
+    font-size: 24px !important;
+  }
+
+  .handbook-detail p {
+    font-size: 16px !important;
+  }
+}
+
+
+/* v63: logo outline and handbook close/action cleanup */
+.logo.logo-image {
+  border: 2px solid var(--ink) !important;
+  padding: 3px !important;
+  background: #fff8ed !important;
+  box-shadow: 0 2px 0 rgba(23,48,51,.12) !important;
+}
+
+.logo.logo-image img {
+  border-radius: 50% !important;
+}
+
+/* Remove the floating purple handbook x from v62 */
+.handbook-x {
+  display: none !important;
+}
+
+.handbook-top-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+}
+
+.handbook-close-pill {
+  border: 1px solid var(--line) !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 12px 18px !important;
+  font-weight: 950 !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+}
+
+.handbook-close-pill:hover {
+  border-color: var(--ink) !important;
+}
+
+/* Filled handbook detail sections */
+.handbook-detail-columns {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+}
+
+.handbook-detail-columns article {
+  border: 1px solid #ead7d2 !important;
+  border-radius: 14px !important;
+  background: #ffffff !important;
+  padding: 13px 14px !important;
+}
+
+.handbook-detail-columns strong {
+  display: block !important;
+  color: var(--ink) !important;
+  font-size: 17px !important;
+  margin-bottom: 8px !important;
+}
+
+.handbook-detail-columns ul {
+  margin: 0 !important;
+  padding-left: 20px !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  line-height: 1.35 !important;
+}
+
+.handbook-detail-columns li {
+  margin: 4px 0 !important;
+}
+
+.handbook-mini-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  margin-top: 0 !important;
+}
+
+/* Keep the Full Handbook PDF button and close pill from crowding on phone */
+@media (max-width: 900px) {
+  .handbook-hub-top {
+    padding-right: 18px !important;
+  }
+
+  .handbook-top-actions {
+    justify-content: flex-start !important;
+  }
+
+  .handbook-detail-columns {
+    grid-template-columns: 1fr !important;
+  }
+
+  .handbook-mini-cards {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .handbook-top-actions {
+    width: 100% !important;
+  }
+
+  .handbook-full-pdf,
+  .handbook-close-pill {
+    width: 100% !important;
+  }
+}
+
+
+/* v65: Admin has its own page again, similar to home but more detailed */
+.admin-page {
+  display: grid !important;
+  gap: 18px !important;
+}
+
+.admin-hero {
+  border: 2px solid var(--ink) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  padding: 24px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 18px !important;
+}
+
+.admin-hero h2 {
+  margin: 4px 0 8px !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 48px !important;
+  line-height: .95 !important;
+  letter-spacing: -.04em !important;
+  color: var(--ink) !important;
+}
+
+.admin-hero p {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  max-width: 760px !important;
+  line-height: 1.35 !important;
+}
+
+.admin-hero button,
+.admin-export-actions button {
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 10px 14px !important;
+  font-weight: 950 !important;
+  white-space: nowrap !important;
+}
+
+.admin-summary-row {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+.admin-summary-row article {
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  padding: 16px !important;
+}
+
+.admin-summary-row strong {
+  display: block !important;
+  color: var(--ink) !important;
+  font-size: 32px !important;
+  line-height: 1 !important;
+}
+
+.admin-summary-row span {
+  display: block !important;
+  color: var(--muted) !important;
+  font-weight: 850 !important;
+  margin-top: 6px !important;
+}
+
+.admin-controls-panel {
+  border: 2px solid var(--ink) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  padding: 18px !important;
+  display: grid !important;
+  gap: 16px !important;
+}
+
+.admin-date-range > strong,
+.admin-filter-panel > strong {
+  display: block !important;
+  color: var(--ink) !important;
+  font-size: 18px !important;
+  margin-bottom: 10px !important;
+}
+
+.admin-date-range > div {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+.admin-date-range label {
+  display: grid !important;
+  gap: 6px !important;
+  color: var(--muted) !important;
+  font-weight: 950 !important;
+}
+
+.admin-date-range input {
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  padding: 10px 14px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  font: inherit !important;
+  font-weight: 900 !important;
+}
+
+.admin-filter-pills {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 9px !important;
+}
+
+.admin-filter-pills button {
+  border: 1px solid var(--line) !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 9px 13px !important;
+  font-weight: 950 !important;
+}
+
+.admin-filter-pills button.active {
+  background: var(--ink) !important;
+  color: #ffffff !important;
+  border-color: var(--ink) !important;
+}
+
+.admin-dashboard-grid {
+  display: grid !important;
+  grid-template-columns: .85fr 1.15fr !important;
+  gap: 18px !important;
+  align-items: start !important;
+}
+
+.admin-box {
+  border: 2px solid var(--ink) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  overflow: hidden !important;
+}
+
+.admin-box-head {
+  border-bottom: 1px solid var(--line) !important;
+  padding: 18px !important;
+  background: #fbf8f2 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  align-items: end !important;
+}
+
+.admin-box-head h3,
+.admin-export-panel h3 {
+  margin: 4px 0 0 !important;
+  color: var(--ink) !important;
+  font-size: 30px !important;
+  line-height: 1 !important;
+}
+
+.admin-box-head p,
+.admin-export-panel p {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+}
+
+.admin-pet-list,
+.admin-report-list {
+  max-height: 560px !important;
+  overflow-y: auto !important;
+  padding: 14px !important;
+  display: grid !important;
+  gap: 12px !important;
+}
+
+.admin-pet-card,
+.admin-report-card {
+  border: 1px solid var(--line) !important;
+  border-radius: 15px !important;
+  background: #ffffff !important;
+  padding: 12px !important;
+  display: grid !important;
+  grid-template-columns: 44px minmax(0, 1fr) auto !important;
+  gap: 12px !important;
+  align-items: center !important;
+}
+
+.admin-report-card.alert {
+  background: #fff2bd !important;
+  border-color: #e2b96b !important;
+}
+
+.admin-pet-card strong,
+.admin-report-card strong {
+  display: block !important;
+  color: var(--ink) !important;
+  font-size: 19px !important;
+  line-height: 1.08 !important;
+}
+
+.admin-pet-card p,
+.admin-report-card p {
+  margin: 3px 0 !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  line-height: 1.2 !important;
+}
+
+.admin-pet-card small,
+.admin-report-card span {
+  border: 1px solid var(--line) !important;
+  border-radius: 999px !important;
+  background: #fbf8f2 !important;
+  color: var(--ink) !important;
+  padding: 7px 10px !important;
+  font-weight: 900 !important;
+  white-space: nowrap !important;
+}
+
+.admin-report-card i {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  border: 2px solid #c8c8c0 !important;
+  display: grid !important;
+  place-items: center !important;
+  font-style: normal !important;
+  font-weight: 950 !important;
+  color: var(--ink) !important;
+  background: #f4f4f1 !important;
+}
+
+.admin-mini-chart {
+  margin-top: 8px !important;
+  height: 9px !important;
+  background: #edf3fa !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  border: 1px solid #c7d5df !important;
+}
+
+.admin-mini-chart span {
+  display: block !important;
+  height: 100% !important;
+  background: #d38a20 !important;
+  border-radius: 999px !important;
+}
+
+.admin-export-panel {
+  border: 2px solid var(--ink) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  padding: 18px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  align-items: center !important;
+}
+
+.admin-export-actions {
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+}
+
+.admin-export-actions button:first-child {
+  background: var(--ink) !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 900px) {
+  .admin-hero,
+  .admin-export-panel,
+  .admin-box-head {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .admin-hero h2 {
+    font-size: 42px !important;
+  }
+
+  .admin-summary-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .admin-date-range > div,
+  .admin-dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .admin-pet-card,
+  .admin-report-card {
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+  }
+
+  .admin-pet-card small,
+  .admin-report-card span {
+    grid-column: 2 !important;
+    justify-self: start !important;
+  }
+
+  .admin-export-actions {
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .admin-summary-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .admin-hero h2 {
+    font-size: 38px !important;
+  }
+
+  .admin-export-actions button {
+    width: 100% !important;
+  }
+}
+
+
+/* v66: Admin all cats becomes a picker, details/charts load only after Review */
+.admin-cat-review {
+  display: grid !important;
+  grid-template-columns: .85fr 1.15fr !important;
+  gap: 18px !important;
+  align-items: start !important;
+}
+
+.admin-cat-list-panel,
+.admin-cat-detail-panel {
+  border: 2px solid var(--ink) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  overflow: hidden !important;
+}
+
+.admin-cat-search-row {
+  display: grid !important;
+  grid-template-columns: 1fr auto !important;
+  gap: 10px !important;
+  padding: 14px !important;
+  border-bottom: 1px solid var(--line) !important;
+  background: #fbf8f2 !important;
+}
+
+.admin-cat-search-row input {
+  border: 1px solid var(--line) !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 11px 14px !important;
+  font: inherit !important;
+  font-weight: 760 !important;
+  min-width: 0 !important;
+}
+
+.admin-cat-search-row button,
+.admin-cat-picker-card button,
+.admin-cat-actions button {
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 9px 13px !important;
+  font-weight: 950 !important;
+  white-space: nowrap !important;
+}
+
+.admin-cat-picker-list {
+  max-height: 560px !important;
+  overflow-y: auto !important;
+  padding: 14px !important;
+  display: grid !important;
+  gap: 12px !important;
+}
+
+.admin-cat-picker-card {
+  border: 1px solid var(--line) !important;
+  border-radius: 15px !important;
+  background: #ffffff !important;
+  padding: 12px !important;
+  display: grid !important;
+  grid-template-columns: 44px minmax(0, 1fr) auto !important;
+  gap: 12px !important;
+  align-items: center !important;
+}
+
+.admin-cat-picker-card.active {
+  border-color: var(--ink) !important;
+  background: #edf3fa !important;
+}
+
+.admin-cat-picker-card strong {
+  display: block !important;
+  color: var(--ink) !important;
+  font-size: 19px !important;
+  line-height: 1.08 !important;
+}
+
+.admin-cat-picker-card p {
+  margin: 3px 0 !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  line-height: 1.2 !important;
+}
+
+.admin-cat-picker-card small {
+  color: var(--muted) !important;
+  font-weight: 850 !important;
+}
+
+.admin-empty-detail {
+  padding: 28px !important;
+  min-height: 320px !important;
+  display: grid !important;
+  align-content: center !important;
+  justify-items: center !important;
+  text-align: center !important;
+  background: #fbf8f2 !important;
+}
+
+.admin-empty-detail h3 {
+  margin: 6px 0 !important;
+  color: var(--ink) !important;
+  font-size: 34px !important;
+}
+
+.admin-empty-detail p {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  max-width: 420px !important;
+}
+
+.admin-selected-profile {
+  display: grid !important;
+  grid-template-columns: 96px minmax(0, 1fr) auto !important;
+  gap: 14px !important;
+  align-items: start !important;
+  padding: 18px !important;
+  border-bottom: 1px solid var(--line) !important;
+  background: #ffffff !important;
+}
+
+.admin-selected-profile .photo {
+  width: 86px !important;
+  height: 78px !important;
+}
+
+.admin-selected-profile h3 {
+  margin: 3px 0 5px !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 42px !important;
+  line-height: .95 !important;
+  color: var(--ink) !important;
+}
+
+.admin-selected-profile p {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-weight: 850 !important;
+}
+
+.admin-cat-actions {
+  display: flex !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+}
+
+.admin-cat-actions button:last-child {
+  background: var(--ink) !important;
+  color: #ffffff !important;
+}
+
+.admin-selected-fields {
+  padding: 14px 18px !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.admin-selected-fields span {
+  border: 1px solid var(--line) !important;
+  border-radius: 12px !important;
+  background: #fbf8f2 !important;
+  padding: 10px 12px !important;
+  color: var(--muted) !important;
+  font-weight: 800 !important;
+}
+
+.admin-selected-fields b {
+  display: block !important;
+  color: var(--ink) !important;
+  text-transform: uppercase !important;
+  letter-spacing: .12em !important;
+  font-size: 12px !important;
+  margin-bottom: 3px !important;
+}
+
+.admin-cat-stats-row {
+  padding: 14px 18px !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.admin-cat-stats-row article {
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+  background: #ffffff !important;
+  padding: 12px !important;
+}
+
+.admin-cat-stats-row strong {
+  display: block !important;
+  color: var(--ink) !important;
+  font-size: 28px !important;
+  line-height: 1 !important;
+}
+
+.admin-cat-stats-row span {
+  display: block !important;
+  color: var(--muted) !important;
+  font-weight: 850 !important;
+  margin-top: 5px !important;
+}
+
+.admin-chart-card,
+.admin-cat-log-panel {
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.admin-box-head.simple {
+  border-top: 0 !important;
+}
+
+.admin-bars {
+  padding: 14px 18px 18px !important;
+  display: grid !important;
+  gap: 10px !important;
+}
+
+.admin-bar-row {
+  display: grid !important;
+  grid-template-columns: 90px 1fr 36px !important;
+  gap: 10px !important;
+  align-items: center !important;
+}
+
+.admin-bar-row strong {
+  color: var(--ink) !important;
+}
+
+.admin-bar-row div {
+  height: 12px !important;
+  border-radius: 999px !important;
+  background: #edf3fa !important;
+  border: 1px solid #c7d5df !important;
+  overflow: hidden !important;
+}
+
+.admin-bar-row span {
+  display: block !important;
+  height: 100% !important;
+  background: #d38a20 !important;
+  border-radius: 999px !important;
+}
+
+.admin-bar-row em {
+  color: var(--muted) !important;
+  font-style: normal !important;
+  font-weight: 950 !important;
+}
+
+.admin-report-list.compact {
+  max-height: 330px !important;
+}
+
+.admin-reports-full {
+  display: block !important;
+}
+
+.admin-report-list.full {
+  max-height: 520px !important;
+}
+
+/* Hide the old side-by-side admin box layout from v65 if CSS still targets it */
+.admin-dashboard-grid {
+  display: none !important;
+}
+
+@media (max-width: 1000px) {
+  .admin-cat-review {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .admin-cat-picker-card,
+  .admin-selected-profile {
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+  }
+
+  .admin-cat-picker-card button,
+  .admin-cat-actions {
+    grid-column: 2 !important;
+    justify-self: start !important;
+  }
+
+  .admin-selected-fields,
+  .admin-cat-stats-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .admin-bar-row {
+    grid-template-columns: 80px 1fr 30px !important;
+  }
+}
+
+
+/* v67: Admin only loads day reports. Full range/export options moved into Download Excel modal. */
+.light-admin-controls {
+  grid-template-columns: 300px 1fr !important;
+  align-items: start !important;
+}
+
+.admin-day-filter {
+  display: grid !important;
+  gap: 10px !important;
+}
+
+.admin-day-filter > strong {
+  color: var(--ink) !important;
+  font-size: 18px !important;
+}
+
+.admin-day-filter label {
+  display: grid !important;
+  gap: 5px !important;
+  color: var(--muted) !important;
+  font-weight: 950 !important;
+}
+
+.admin-day-filter input {
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  padding: 10px 14px !important;
+  color: var(--ink) !important;
+  background: #ffffff !important;
+  font: inherit !important;
+  font-weight: 950 !important;
+}
+
+.admin-reports-full .admin-report-list.full {
+  max-height: 430px !important;
+}
+
+/* Excel export modal */
+.excel-export-modal {
+  width: min(820px, calc(100vw - 24px)) !important;
+  max-height: 88vh !important;
+  overflow: auto !important;
+}
+
+.excel-export-body {
+  padding: 18px !important;
+  display: grid !important;
+  gap: 14px !important;
+}
+
+.excel-note {
+  margin: 0 !important;
+  border: 1px solid #c7d5df !important;
+  background: #edf3fa !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  color: var(--ink) !important;
+  font-weight: 800 !important;
+}
+
+.excel-range-card {
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  background: #fbf8f2 !important;
+  padding: 14px !important;
+  display: grid !important;
+  gap: 10px !important;
+}
+
+.excel-range-card > strong {
+  color: var(--ink) !important;
+  font-size: 18px !important;
+}
+
+.excel-choice-row,
+.excel-pill-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.excel-choice-row button,
+.excel-pill-grid button {
+  border: 1px solid var(--line) !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 9px 13px !important;
+  font-weight: 950 !important;
+}
+
+.excel-choice-row button.active,
+.excel-pill-grid button.active {
+  background: var(--ink) !important;
+  color: #ffffff !important;
+  border-color: var(--ink) !important;
+}
+
+.excel-date-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+}
+
+.excel-date-row label {
+  display: grid !important;
+  gap: 5px !important;
+  color: var(--muted) !important;
+  font-weight: 950 !important;
+}
+
+.excel-date-row input {
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  padding: 10px 14px !important;
+  color: var(--ink) !important;
+  background: #ffffff !important;
+  font: inherit !important;
+  font-weight: 950 !important;
+}
+
+.excel-download-footer {
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  padding: 14px !important;
+  background: #ffffff !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+}
+
+.excel-download-footer button {
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 10px 16px !important;
+  font-weight: 950 !important;
+}
+
+.excel-download-footer button:last-child {
+  background: var(--ink) !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 900px) {
+  .light-admin-controls {
+    grid-template-columns: 1fr !important;
+  }
+
+  .excel-date-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* v68: put reports higher and simplify export tools */
+.admin-reports-full {
+  order: 1 !important;
+}
+
+.admin-cat-review {
+  order: 2 !important;
+}
+
+.admin-export-panel {
+  order: 3 !important;
+}
+
+/* Since Export tools now has only one button, make it cleaner */
+.admin-export-panel {
+  align-items: center !important;
+}
+
+.admin-export-actions {
+  justify-content: flex-end !important;
+  min-width: 210px !important;
+}
+
+.admin-export-actions button {
+  min-width: 190px !important;
+}
+
+/* Do not let the single button wrap awkwardly on desktop */
+@media (min-width: 901px) {
+  .admin-export-panel {
+    grid-template-columns: 1fr auto !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .admin-export-actions {
+    min-width: 0 !important;
+    justify-content: flex-start !important;
+  }
+}
+
+
+/* v69: admin cat detail refinements */
+.admin-chart-card .admin-box-head.simple p {
+  display: none !important;
+}
+
+/* If the chart value is zero, the fill should truly be invisible */
+.admin-bar-row span[style*="width: 0%"] {
+  display: none !important;
+}
+
+/* Fit the extra medical button without crowding */
+.admin-cat-actions {
+  max-width: 420px !important;
+}
+
+.admin-cat-actions button {
+  padding: 9px 12px !important;
+}
+
+/* Medical section inside selected admin cat detail */
+.admin-medical-review {
+  border-bottom: 1px solid var(--line) !important;
+  background: #fffdfb !important;
+}
+
+.admin-medical-review .admin-box-head.simple {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background: #fbf8f2 !important;
+}
+
+.admin-medical-review .admin-box-head.simple button {
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 9px 13px !important;
+  font-weight: 950 !important;
+  white-space: nowrap !important;
+}
+
+.admin-medical-grid {
+  padding: 14px 18px !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+
+.admin-medical-grid article {
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+  background: #ffffff !important;
+  padding: 12px !important;
+}
+
+.admin-medical-grid strong {
+  display: block !important;
+  color: var(--ink) !important;
+  margin-bottom: 5px !important;
+}
+
+.admin-medical-grid p {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  line-height: 1.3 !important;
+}
+
+/* Edit profile + medical modals */
+.admin-edit-modal,
+.admin-medical-modal {
+  width: min(860px, calc(100vw - 24px)) !important;
+  max-height: 88vh !important;
+  overflow: auto !important;
+}
+
+.admin-edit-body,
+.admin-medical-body {
+  padding: 18px !important;
+  display: grid !important;
+  gap: 14px !important;
+}
+
+.admin-edit-note {
+  margin: 0 !important;
+  border: 1px solid #c7d5df !important;
+  background: #edf3fa !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  color: var(--ink) !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+}
+
+.admin-edit-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+.admin-edit-grid label,
+.admin-medical-card {
+  border: 1px solid var(--line) !important;
+  background: #fbf8f2 !important;
+  border-radius: 16px !important;
+  padding: 13px !important;
+  color: var(--ink) !important;
+  font-weight: 950 !important;
+  display: grid !important;
+  gap: 8px !important;
+}
+
+.admin-edit-grid label.wide {
+  grid-column: 1 / -1 !important;
+}
+
+.admin-edit-grid input,
+.admin-edit-grid textarea,
+.admin-medical-card input,
+.admin-medical-card textarea {
+  border: 1px solid var(--line) !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 11px 12px !important;
+  font: inherit !important;
+  font-weight: 760 !important;
+  min-width: 0 !important;
+}
+
+.admin-edit-grid textarea,
+.admin-medical-card textarea {
+  min-height: 96px !important;
+  resize: vertical !important;
+}
+
+.admin-medical-card {
+  grid-template-columns: 1fr !important;
+}
+
+.admin-medical-card strong {
+  color: var(--ink) !important;
+  font-size: 19px !important;
+}
+
+.admin-medical-card p {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  line-height: 1.35 !important;
+}
+
+.admin-med-two {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+}
+
+.admin-medical-card.danger-soft {
+  background: #fff6f6 !important;
+  border-color: #e8c4c4 !important;
+}
+
+.admin-medical-card.danger-soft button {
+  border: 2px solid #b74d55 !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: #8d2e37 !important;
+  padding: 10px 14px !important;
+  font-weight: 950 !important;
+  width: fit-content !important;
+}
+
+.admin-edit-actions {
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  padding: 14px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+}
+
+.admin-edit-actions button {
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 10px 16px !important;
+  font-weight: 950 !important;
+}
+
+.admin-edit-actions button:last-child {
+  background: var(--ink) !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 900px) {
+  .admin-medical-grid,
+  .admin-edit-grid,
+  .admin-med-two {
+    grid-template-columns: 1fr !important;
+  }
+
+  .admin-medical-review .admin-box-head.simple {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .admin-cat-actions {
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .admin-edit-actions button,
+  .admin-medical-card.danger-soft button {
+    width: 100% !important;
+  }
+}
+
+
+/* v70: Admin cat picker/detail should be top and bottom, not side by side */
+.admin-cat-review {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 18px !important;
+  align-items: stretch !important;
+}
+
+/* Keep the cat picker compact now that it is full-width */
+.admin-cat-picker-list {
+  max-height: 430px !important;
+}
+
+/* Let the detail area use the full width under the picker */
+.admin-cat-detail-panel {
+  width: 100% !important;
+}
+
+/* Make selected cat profile breathe better in full-width layout */
+.admin-selected-profile {
+  grid-template-columns: 96px minmax(0, 1fr) auto !important;
+}
+
+/* In full-width detail, the fields can use three columns cleanly */
+.admin-selected-fields {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+/* Keep charts and medical section from feeling squeezed */
+.admin-medical-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.admin-cat-stats-row {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+/* Phone stays stacked and readable */
+@media (max-width: 900px) {
+  .admin-selected-profile {
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+  }
+
+  .admin-selected-fields,
+  .admin-medical-grid,
+  .admin-cat-stats-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* v71: remove the white ring around uploaded logo */
+.logo.logo-image {
+  background: transparent !important;
+  border-color: var(--ink) !important;
+  padding: 0 !important;
+}
+
+.logo.logo-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+}
+
+/* v71: multiple-medication manager and automatic handbook dose reference */
+.admin-medication-manager {
+  border: 1px solid var(--line) !important;
+  background: #fbf8f2 !important;
+  border-radius: 16px !important;
+  padding: 14px !important;
+  display: grid !important;
+  gap: 12px !important;
+}
+
+.admin-med-manager-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  align-items: flex-start !important;
+}
+
+.admin-med-manager-top strong {
+  color: var(--ink) !important;
+  font-size: 19px !important;
+}
+
+.admin-med-manager-top p {
+  margin: 5px 0 0 !important;
+  color: var(--muted) !important;
+  font-weight: 760 !important;
+  line-height: 1.35 !important;
+}
+
+.admin-med-manager-top button,
+.admin-med-entry-top button {
+  border: 2px solid var(--ink) !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 9px 13px !important;
+  font-weight: 950 !important;
+  white-space: nowrap !important;
+}
+
+.admin-med-list {
+  display: grid !important;
+  gap: 12px !important;
+}
+
+.admin-med-entry {
+  border: 1px solid var(--line) !important;
+  border-radius: 15px !important;
+  background: #ffffff !important;
+  padding: 13px !important;
+  display: grid !important;
+  gap: 10px !important;
+}
+
+.admin-med-entry-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  align-items: center !important;
+}
+
+.admin-med-entry-top strong {
+  color: var(--ink) !important;
+  font-size: 18px !important;
+}
+
+.admin-med-entry label,
+.wide-med-label {
+  display: grid !important;
+  gap: 6px !important;
+  color: var(--ink) !important;
+  font-weight: 950 !important;
+}
+
+.admin-med-entry select,
+.admin-med-entry input,
+.admin-med-entry textarea {
+  border: 1px solid var(--line) !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 11px 12px !important;
+  font: inherit !important;
+  font-weight: 760 !important;
+  min-width: 0 !important;
+}
+
+.admin-med-entry input[readonly] {
+  background: #edf3fa !important;
+  border-color: #c7d5df !important;
+  color: var(--ink) !important;
+}
+
+.dose-reference-box {
+  border: 1px solid #d38a20 !important;
+  border-radius: 14px !important;
+  background: #fff2bd !important;
+  color: var(--ink) !important;
+  padding: 10px 12px !important;
+  display: grid !important;
+  gap: 3px !important;
+}
+
+.dose-reference-box b,
+.dose-reference-box span {
+  display: block !important;
+}
+
+.dose-reference-box span {
+  color: var(--muted) !important;
+  font-weight: 850 !important;
+}
+
+@media (max-width: 900px) {
+  .admin-med-manager-top,
+  .admin-med-entry-top {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .admin-med-manager-top button,
+  .admin-med-entry-top button {
+    width: fit-content !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .admin-med-manager-top button,
+  .admin-med-entry-top button {
+    width: 100% !important;
+  }
+}
